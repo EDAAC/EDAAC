@@ -33,19 +33,22 @@ We show the use of EDAAC through a series of tutorials.
 #### Tutorial 1: Setting Up A Project
 Follow the step-by-step guide at [url](#)
 
-### Tutorial 2: Collect Logic Synthesis Data
+#### Tutorial 2: Collect Logic Synthesis Data
 Follow the step-by-step guide at [url](#)
 
-### Tutorial 3: Collect Floorplan Data
+#### Tutorial 3: Collect Floorplan Data
 Follow the step-by-step guide at [url](#)
 
-### Tutorial 4: Collect Placement Data
+#### Tutorial 4: Collect Placement Data
 Follow the step-by-step guide at [url](#)
 
-### Tutorial 5: Collect Clock Tree Synthesis Data
+#### Tutorial 5: Collect Clock Tree Synthesis Data
 Follow the step-by-step guide at [url](#)
 
-### Tutorial 6: Collect Routing Data
+#### Tutorial 6: Collect Routing Data
+Follow the step-by-step guide at [url](#)
+
+#### Tutorial 7: Quering The Data
 Follow the step-by-step guide at [url](#)
 
 ## License
