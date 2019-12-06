@@ -17,15 +17,22 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-class Project:
+from .Design import Design
+from .Technology import Technology
+
+class Flow:
     """
-    A class used to represent an EDA project
+    A class used to represent an RTL-to-GDS flow
     """
-    def __init__(name, load_existing=False):
+    def __init__(design, technology, load_existing=False, flow_id=None):
+        self.design = design
+        self.technology = technology
+
         if load_existing:
-            # TODO: load project document from database
+            # TODO: load flow document from database
             pass
         else:
-            # TODO: get a new project ID by creating or getting a database document
+            # TODO: get a new flow ID by creating or getting a database document
             self.id = 1
-            self.name = name
+        
+

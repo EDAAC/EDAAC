@@ -25,31 +25,19 @@ A full documentation can be found at [url](#)
 TBC
 
 ### Install
-TBC
+EDAAC is available on PyPi.
+
+```
+pip install edaac
+```
 
 ### Tutorials
 We show the use of EDAAC through a series of tutorials.
 
-#### Tutorial 1: Setting Up A Project
-Follow the step-by-step guide at [url](#)
+* Tutorial 1: [Collecting metrics from an offline flow](tutorial/tutorial_1.py)
+* Tutorial 2: [Querying metrics](tutorial/tutorial_2.py)
+* Tutorial 3: [Collecting metrics from a running flow](#)
 
-#### Tutorial 2: Collect Logic Synthesis Data
-Follow the step-by-step guide at [url](#)
-
-#### Tutorial 3: Collect Floorplan Data
-Follow the step-by-step guide at [url](#)
-
-#### Tutorial 4: Collect Placement Data
-Follow the step-by-step guide at [url](#)
-
-#### Tutorial 5: Collect Clock Tree Synthesis Data
-Follow the step-by-step guide at [url](#)
-
-#### Tutorial 6: Collect Routing Data
-Follow the step-by-step guide at [url](#)
-
-#### Tutorial 7: Quering The Data
-Follow the step-by-step guide at [url](#)
 
 ## License
 [BSD 3-Clause License](LICENSE)

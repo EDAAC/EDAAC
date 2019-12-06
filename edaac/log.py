@@ -16,16 +16,23 @@ CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY,
 OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
+import logging
 
-class Project:
-    """
-    A class used to represent an EDA project
-    """
-    def __init__(name, load_existing=False):
-        if load_existing:
-            # TODO: load project document from database
-            pass
-        else:
-            # TODO: get a new project ID by creating or getting a database document
-            self.id = 1
-            self.name = name
+def get_logger(level=logging.DEBUG):
+    logging.basicConfig(format='[%(asctime)s] - %(levelname)s :: %(message)s', \
+        level=level, \
+        datefmt='%Y/%m/%d %I:%M:%S %p')
+    logger = logging.getLogger('edaac')
+    logger.setLevel(level)
+
+    return logger
+
+
+if __name__ == "__main__":
+    logger = get_logger()
+    logger.debug('debug message')
+    logger.info('info message')
+    logger.warning('warn message')
+    logger.error('error message')
+    logger.critical('critical message')
+    

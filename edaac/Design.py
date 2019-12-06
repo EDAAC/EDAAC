@@ -17,15 +17,26 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-class Project:
+class Design:
     """
-    A class used to represent an EDA project
+    A class used to represent an Design used in a Project
     """
-    def __init__(name, load_existing=False):
-        if load_existing:
-            # TODO: load project document from database
-            pass
-        else:
-            # TODO: get a new project ID by creating or getting a database document
-            self.id = 1
-            self.name = name
+    def __init__(name=None, runset_tag=None, runset_id=None, \
+        rtl_config=None, rtl_tag=None, rtl_rag=None):
+        # TODO: get design ID by creating or getting a MongoDB document
+        self.id = 1
+        self.name = name
+
+        # Runsets: all RTL related tags for the release candidates
+        self.runset_tag = runset_tag
+        self.runset_id = runset_id
+
+        # RTL configs
+        self.rtl_config = rtl_config
+        self.rtl_tag = rtl_tag
+
+        # RAG = Red, Amber, Green.
+        # Red -> no much verification ran on it
+        # Amber -> alpha or beta release with some levels of verifications on
+        # Green -> release candidate
+        self.rtl_rag = rtl_rag

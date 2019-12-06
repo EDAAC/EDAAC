@@ -17,15 +17,21 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-class Project:
+class Technology:
     """
-    A class used to represent an EDA project
+    A class used to represent an Technology used in a Project
     """
-    def __init__(name, load_existing=False):
-        if load_existing:
-            # TODO: load project document from database
-            pass
-        else:
-            # TODO: get a new project ID by creating or getting a database document
-            self.id = 1
-            self.name = name
+    def __init__(foundry=None, process=None, beol=None, track=None, \
+        opv=None, vtc=None, config=None, version=None, rag=None):
+        # TODO: get technology ID by creating or getting a MongoDB document
+        self.id = 1
+        self.foundry = foundry
+        self.process = process  # e.g. 16nm
+        self.beol = beol        # back end of line: label that is given by the foundry; the metal stack
+        self.track = track      # the heights of the track
+        self.opv = opv          # operating voltage
+        self.vtc = vtc          # Vt and channel width
+        self.config = config
+        self.version = version
+        self.rag = rag
+        
