@@ -25,18 +25,15 @@ A full documentation can be found at [url](#)
 TBC
 
 ### Install
-EDAAC is available on PyPi.
-
 ```
-pip install edaac
+> pip install edaac
 ```
 
 ### Tutorials
 We show the use of EDAAC through a series of tutorials.
 
-* Tutorial 1: [Collecting metrics from an offline flow](tutorial/tutorial_1.py)
-* Tutorial 2: [Querying metrics](tutorial/tutorial_2.py)
-* Tutorial 3: [Collecting metrics from a running flow](#)
+* Tutorial 1: [Passive data collection](tutorial/tutorial_1.py)
+* Tutorial 2: [Querying metrics - offline usage](tutorial/tutorial_2.py)
 
 
 ## License
