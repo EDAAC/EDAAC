@@ -17,21 +17,21 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-class Technology:
+import mongoengine as mongo
+
+class Technology(mongo.EmbeddedDocument):
     """
     A class used to represent an Technology used in a Project
     """
-    def __init__(foundry=None, process=None, beol=None, track=None, \
-        opv=None, vtc=None, config=None, version=None, rag=None):
-        # TODO: get technology ID by creating or getting a MongoDB document
-        self.id = 1
-        self.foundry = foundry
-        self.process = process  # e.g. 16nm
-        self.beol = beol        # back end of line: label that is given by the foundry; the metal stack
-        self.track = track      # the heights of the track
-        self.opv = opv          # operating voltage
-        self.vtc = vtc          # Vt and channel width
-        self.config = config
-        self.version = version
-        self.rag = rag
+    foundry = mongo.StringField()
+    process = mongo.StringField()   # e.g. 16nm
+    beol = mongo.StringField()      # back end of line: label that is given by the foundry; the metal stack
+    track = mongo.StringField()     # the heights of the track
+    opv = mongo.StringField()       # operating voltage
+    vt = mongo.StringField()        # Vt 
+    channel_width = mongo.StringField()
+    config = mongo.StringField()
+    version = mongo.StringField()
+    rag = mongo.StringField()
+
         

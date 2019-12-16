@@ -17,26 +17,27 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-class Design:
+import mongoengine as mongo
+
+class Design(mongo.EmbeddedDocument):
     """
     A class used to represent an Design used in a Project
     """
-    def __init__(name=None, runset_tag=None, runset_id=None, \
-        rtl_config=None, rtl_tag=None, rtl_rag=None):
-        # TODO: get design ID by creating or getting a MongoDB document
-        self.id = 1
-        self.name = name
+    name = mongo.StringField(required=True)
+    rtl_files = mongo.ListField(mongo.StringField(), required=True)
+    sdc_file = mongo.StringField()
+    
+    # Runsets: all RTL related tags for the release candidates
+    runset_tag = mongo.StringField()
+    runset_id = mongo.StringField()
 
-        # Runsets: all RTL related tags for the release candidates
-        self.runset_tag = runset_tag
-        self.runset_id = runset_id
+    # RTL configs
+    rtl_config = mongo.StringField()
+    rtl_tag = mongo.StringField()
 
-        # RTL configs
-        self.rtl_config = rtl_config
-        self.rtl_tag = rtl_tag
-
-        # RAG = Red, Amber, Green.
-        # Red -> no much verification ran on it
-        # Amber -> alpha or beta release with some levels of verifications on
-        # Green -> release candidate
-        self.rtl_rag = rtl_rag
+    # RAG = Red, Amber, Green.
+    # Red -> no much verification ran on it
+    # Amber -> alpha or beta release with some levels of verifications on
+    # Green -> release candidate
+    rtl_rag = mongo.StringField()
+    

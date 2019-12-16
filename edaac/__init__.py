@@ -19,3 +19,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from .version import *
 from .log import *
+from .Project import Project
+from .Design import Design
+from .Technology import Technology

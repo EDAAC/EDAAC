@@ -21,7 +21,11 @@ setup(
   url = 'https://github.com/abdelrahmanhosny/EDAAC',
   download_url = download_url,
   keywords = ['EDA', 'Electronic', 'Design', 'Automation', 'Data', 'Analytics'],
-  install_requires=['pymongo',],
+  install_requires=[
+    'mongoengine==0.18.2', 
+    'pymongo==3.10.0', 
+    'six==1.13.0',
+  ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package
     'Intended Audience :: Developers',

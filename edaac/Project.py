@@ -17,15 +17,15 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-class Project:
+import mongoengine as mongo
+from .Design import Design
+from .Technology import Technology
+
+class Project(mongo.Document):
     """
     A class used to represent an EDA project
     """
-    def __init__(name, load_existing=False):
-        if load_existing:
-            # TODO: load project document from database
-            pass
-        else:
-            # TODO: get a new project ID by creating or getting a database document
-            self.id = 1
-            self.name = name
+    name = mongo.StringField(required=True, primary_key=True)
+    description = mongo.StringField(max_length=100)
+    design = mongo.EmbeddedDocumentField(Design)
+    technology = mongo.EmbeddedDocumentField(Technology)
