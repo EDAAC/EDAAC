@@ -17,11 +17,21 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-import mongoengine as mongo
-from .Stage import Stage
+import enum
 
-class Flow(mongo.EmbeddedDocument):
+class DataCollectionMode(enum.Enum):
     """
-    A class used to represent an RTL-to-GDS flow
+    A class used to represent how the data in a flow stage is collected
     """
-    stages = mongo.ListField(mongo.EmbeddedDocumentField(Stage))
+    OFFLINE_FROM_LOGS = 1
+    DURING_RUN_TIME = 2
+    
+
+class StageStatus(enum.Enum):
+    """
+    A class used to represent the status of a flow stage
+    """
+    NOT_STARTED = 1
+    RUNNING = 2
+    COMPLETED_SUCCESSFULLY = 3
+    COMPLETED_WITH_ERRORS = 4

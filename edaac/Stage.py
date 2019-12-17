@@ -18,10 +18,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-from .Stage import Stage
+from .Tool import Tool
+from .enum import StageStatus, DataCollectionMode
 
-class Flow(mongo.EmbeddedDocument):
+class Stage(mongo.EmbeddedDocument):
     """
-    A class used to represent an RTL-to-GDS flow
+    A class used to represent an Stage in a Flow
     """
-    stages = mongo.ListField(mongo.EmbeddedDocumentField(Stage))
+    name = mongo.StringField()
+    tool = mongo.EmbeddedDocumentField(Tool)
+    machine = mongo.StringField()
+    collection_mode = mongo.StringField(choices=[e.name for e in DataCollectionMode])
+    status = mongo.StringField(choices=[e.name for e in StageStatus])
+    log_files = mongo.ListField(mongo.StringField())

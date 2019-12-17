@@ -18,10 +18,10 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-from .Stage import Stage
 
-class Flow(mongo.EmbeddedDocument):
+class Tool(mongo.EmbeddedDocument):
     """
-    A class used to represent an RTL-to-GDS flow
+    A class used to represent an Stage in a Flow
     """
-    stages = mongo.ListField(mongo.EmbeddedDocumentField(Stage))
+    name = mongo.StringField()
+    version = mongo.StringField()

@@ -24,22 +24,24 @@ technology = edaac.Technology(
 project.technology = technology
 
 # setup a stage in the flow
-stage = edaac.Stage()
-stage.configure(config={
-    name:'',
-    tool:edaac.Tool(name='', version=''),
-    machines:edaac.Machine(name=''),
-    state:edaac.STAGE_FINISHED,
-    log_files:['', '', ''],
-    collection_mode:edaac.DATA_OFFLINE
-})
-flow.add_stage(stage)
-
-# add flow to the project
-project.add_flow(flow)
+flow = edaac.Flow()
+flow.stages = [
+    edaac.Stage(
+        name='LogicSynthesis',
+        tool=edaac.Tool(
+            name='yosys',
+            version='0.8+576'
+        ),
+        machine='scale01.engin.brown.edu',
+        collection_mode=edaac.DataCollectionMode.OFFLINE_FROM_LOGS.name,
+        status=edaac.StageStatus.COMPLETED_SUCCESSFULLY.name,
+        log_files=['/tmp/div.1.log']
+    ),
+]
+project.flows.append(flow)
 
 # extract metrics from flow stages
 project.extract_metrics()
 
-# synchronize with the database
-project.sync()
+# save to the database
+project.save()

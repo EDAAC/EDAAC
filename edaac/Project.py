@@ -20,6 +20,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import mongoengine as mongo
 from .Design import Design
 from .Technology import Technology
+from .Flow import Flow
+from .log import get_logger
 
 class Project(mongo.Document):
     """
@@ -29,3 +31,8 @@ class Project(mongo.Document):
     description = mongo.StringField(max_length=100)
     design = mongo.EmbeddedDocumentField(Design)
     technology = mongo.EmbeddedDocumentField(Technology)
+    flows = mongo.ListField(mongo.EmbeddedDocumentField(Flow))
+
+    def extract_metrics(self):
+        logger = get_logger()
+        logger.info('Starting metrics collection process .. ')
