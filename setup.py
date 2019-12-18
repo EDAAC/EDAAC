@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 # version
 version = {}
@@ -12,7 +12,7 @@ with open("README.md", "r") as fh:
 
 setup(
   name = 'edaac',
-  packages = ['edaac'],
+  packages = find_packages(),
   version = version['__version__'],
   license = 'BSD-3 License',
   description = 'Your day-to-day EDA analytics tool',

@@ -30,7 +30,7 @@ flow.stages = [
         name='LogicSynthesis',
         tool=edaac.Tool(
             name='yosys',
-            version='0.8+576'
+            version='0_8_576'
         ),
         machine='scale01.engin.brown.edu',
         collection_mode=edaac.DataCollectionMode.OFFLINE_FROM_LOGS.name,

@@ -22,6 +22,7 @@ from .Design import Design
 from .Technology import Technology
 from .Flow import Flow
 from .log import get_logger
+from .metrics.helpers import registered_tool
 
 class Project(mongo.Document):
     """
@@ -36,3 +37,22 @@ class Project(mongo.Document):
     def extract_metrics(self):
         logger = get_logger()
         logger.info('Starting metrics collection process .. ')
+    
+        for flow in self.flows:
+            for stage in flow.stages:
+                tool = registered_tool(stage.tool.name)
+                
+                if tool is not None:
+                    if stage.tool.version in tool['versions']:
+                        logger.info('%s parser successfully loaded', stage.tool.name)
+                        for log_file in stage.log_files:
+                            stage.metrics = tool['versions'][stage.tool.version](log_file)
+                    else:
+                        logger.warn('Tool %s is recognized, but version %s is not registered - will use default version %s', \
+                            stage.tool.name, stage.tool.version, tool['default_version'])
+                        for log_file in stage.log_files:
+                            stage.metrics = tool['versions'][tool['default_version']](log_file)
+                else:
+                    logger.error('Tool %s is not recognized!', stage.tool.name)
+                    exit()
+        

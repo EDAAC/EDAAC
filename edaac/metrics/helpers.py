@@ -17,12 +17,22 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-from .version import *
-from .log import *
-from .Project import Project
-from .Design import Design
-from .Technology import Technology
-from .Tool import Tool
-from .Stage import Stage
-from .Flow import Flow
-from .enum import StageStatus, DataCollectionMode
+from collections import defaultdict
+import edaac.metrics.logic_synthesis as ls
+
+__available_tools__ = defaultdict(lambda: None)
+__available_tools__['yosys'] =  {
+    'default_version': '0_8_576',
+    'versions': {
+        '0_8_576': ls.yosys.parse_0_8_567
+    }
+}
+
+def registered_tool(tool_name):
+    global __available_tools__
+    return __available_tools__[tool_name]
+
+
+if __name__ == "__main__":
+    print(registered_tool('yosys'))
+    print(registered_tool('dummy'))
