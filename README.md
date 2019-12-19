@@ -1,4 +1,4 @@
-# EDA Analytics Central
+# EDA Analytics Central <img align="right" width="10%" src="doc/img/logo.png">
 
 ## The Problem
 While there is an _art_ to chip design, measuring design processes can result in precious data that help advancing the _science_ of chip design.
@@ -38,6 +38,10 @@ We show the use of EDAAC through a series of tutorials.
 
 ## License
 [BSD 3-Clause License](LICENSE)
+
+## Credits
+Icon made by [mynamepong](https://www.flaticon.com/authors/mynamepong) from [www.flaticon.com](https://www.flaticon.com/)
+
 
 ## References
 [1] Fenstermaker, Stephen, et al. "METRICS: a system architecture for design process optimization." Proceedings of the 37th Annual Design Automation Conference. ACM, 2000.
