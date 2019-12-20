@@ -34,7 +34,7 @@ We show the use of EDAAC through a series of tutorials.
 
 
 ## License
-[BSD 3-Clause License](LICENSE)
+[BSD 3-Clause License](https://github.com/abdelrahmanhosny/EDAAC/blob/master/LICENSE)
 
 ## Credits
 Icon made by [mynamepong](https://www.flaticon.com/authors/mynamepong) from [www.flaticon.com](https://www.flaticon.com/)
