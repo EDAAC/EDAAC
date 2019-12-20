@@ -29,8 +29,8 @@ The goal of EDAAC is to make it painless to perform the following tasks:
 ### Tutorials
 We show the use of EDAAC through a series of tutorials.
 
-* Tutorial 1: [Passive data collection](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/tutorial_1_collect_data.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/use_case_1_analysis.py)
-* Tutorial 2: [Querying metrics - offline usage](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/tutorial_2_analysis.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/use_case_1_analysis.py)
+* Tutorial 1: [Passive data collection](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/tutorial_1_collect_data.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/use_case_1_analysis.py)
+* Tutorial 2: [Querying metrics - offline usage](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/tutorial_2_analysis.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/use_case_1_analysis.py)
 
 
 ## License
