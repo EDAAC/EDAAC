@@ -18,6 +18,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
+import json
 from .Tool import Tool
 from .enum import StageStatus, DataCollectionMode
 
@@ -31,3 +32,6 @@ class Stage(mongo.DynamicEmbeddedDocument):
     collection_mode = mongo.StringField(choices=[e.name for e in DataCollectionMode])
     status = mongo.StringField(choices=[e.name for e in StageStatus])
     log_file = mongo.StringField()
+
+    def report_metrics(self):
+        return self.metrics

@@ -1,4 +1,4 @@
-# EDA Analytics Central <img align="right" width="10%" src="doc/img/logo.png">
+# EDA Analytics Central <img align="right" width="10%" src="https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/logo.png">
 
 ## The Problem
 While there is an _art_ to chip design, measuring design processes can result in precious data that help advancing the _science_ of chip design.
@@ -17,10 +17,9 @@ The goal of EDAAC is to make it painless to perform the following tasks:
     * _Offline usage_: the flow has run and ended, metrics are stored (either passively or actively). This supports ML around tools.
     * _Online usage_: the flow is currently running and a tool wants to take a decision based on a collected metric during the flow run. This supports ML in tools.
 
-## Getting Started
+![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/edaac-function.png)
 
-### Understand the Architecture
-TBC
+## Getting Started
 
 ### Install
 ```
@@ -30,8 +29,8 @@ TBC
 ### Tutorials
 We show the use of EDAAC through a series of tutorials.
 
-* Tutorial 1: [Passive data collection](tutorial/tutorial_1.py)
-* Tutorial 2: [Querying metrics - offline usage](tutorial/tutorial_2.py)
+* Tutorial 1: [Passive data collection](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/tutorial_1_collect_data.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/use_case_1_analysis.py)
+* Tutorial 2: [Querying metrics - offline usage](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/tutorial_2_analysis.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorial/use_case_1_analysis.py)
 
 
 ## License

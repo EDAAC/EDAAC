@@ -17,8 +17,10 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE \
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE. \
 
 clean:
-	rm -r dist
-	rm -r edaac.egg-info
+	rm -rf dist
+	rm -rf edaac.egg-info
+	rm -rf build
+	
 build:
 	python setup.py sdist
 
