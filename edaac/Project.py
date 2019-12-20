@@ -36,7 +36,7 @@ class Project(mongo.Document):
 
     def extract_metrics(self):
         logger = get_logger()
-        logger.info('Starting metrics collection process .. ')
+        logger.info('Starting metrics collection process on %s .. ', self.design.name)
     
         for flow in self.flows:
             for stage in flow.stages:
@@ -49,8 +49,7 @@ class Project(mongo.Document):
                     else:
                         logger.warn('Tool %s is recognized, but version %s is not registered - will use default version %s', \
                             stage.tool.name, stage.tool.version, tool['default_version'])
-                        stage.metrics = tool['versions'][tool['default_version']](stage.log_file)
-                            
+                        stage.metrics = tool['versions'][tool['default_version']](stage.log_file)          
                 else:
                     logger.error('Tool %s is not recognized!', stage.tool.name)
                     exit()

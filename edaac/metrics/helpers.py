@@ -19,12 +19,19 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 from collections import defaultdict
 import edaac.metrics.logic_synthesis as ls
+import edaac.metrics.timing as timing
 
 __available_tools__ = defaultdict(lambda: None)
 __available_tools__['yosys'] =  {
     'default_version': '0_8_576',
     'versions': {
         '0_8_576': ls.yosys.parse_0_8_567
+    }
+}
+__available_tools__['Tempus'] =  {
+    'default_version': '19_10_p002_1',
+    'versions': {
+        '19_10_p002_1': timing.Tempus.parse_19_10_p002_1
     }
 }
 

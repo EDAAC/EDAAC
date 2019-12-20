@@ -17,17 +17,4 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-import mongoengine as mongo
-from .Tool import Tool
-from .enum import StageStatus, DataCollectionMode
-
-class Stage(mongo.DynamicEmbeddedDocument):
-    """
-    A class used to represent an Stage in a Flow
-    """
-    name = mongo.StringField()
-    tool = mongo.EmbeddedDocumentField(Tool)
-    machine = mongo.StringField()
-    collection_mode = mongo.StringField(choices=[e.name for e in DataCollectionMode])
-    status = mongo.StringField(choices=[e.name for e in StageStatus])
-    log_file = mongo.StringField()
+from .parsers import *

@@ -17,17 +17,23 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-import mongoengine as mongo
-from .Tool import Tool
-from .enum import StageStatus, DataCollectionMode
+from edaac.log import get_logger
+import re
 
-class Stage(mongo.DynamicEmbeddedDocument):
-    """
-    A class used to represent an Stage in a Flow
-    """
-    name = mongo.StringField()
-    tool = mongo.EmbeddedDocumentField(Tool)
-    machine = mongo.StringField()
-    collection_mode = mongo.StringField(choices=[e.name for e in DataCollectionMode])
-    status = mongo.StringField(choices=[e.name for e in StageStatus])
-    log_file = mongo.StringField()
+def parse_19_10_p002_1(log_file_name):
+    logger = get_logger()
+    metrics = {}
+
+    try:
+        with open(log_file_name, 'r') as f:
+            for line in f:
+                if line.startswith('- Arrival Time'):
+                    arrival_time = re.findall(r'-?\d+\.?\d*', line)[0]
+                    metrics['arrival_time'] = float(arrival_time)
+                    break
+            logger.info('Successfully extracted metrics from %s', log_file_name)
+
+    except Exception as e:
+        logger.warn('Can\'t read log file: %s. Skipping ..', log_file_name)
+
+    return metrics
