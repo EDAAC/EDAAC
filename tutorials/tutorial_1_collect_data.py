@@ -35,7 +35,7 @@ flow.stages = [
         machine='scale01.engin.brown.edu',
         collection_mode=edaac.DataCollectionMode.OFFLINE_FROM_LOGS.name,
         status=edaac.StageStatus.COMPLETED_SUCCESSFULLY.name,
-        log_files=['/tmp/div.1.log']
+        log_file='/tmp/div.1.log'
     ),
 ]
 project.flows.append(flow)

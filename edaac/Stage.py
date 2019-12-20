@@ -30,4 +30,4 @@ class Stage(mongo.EmbeddedDocument):
     machine = mongo.StringField()
     collection_mode = mongo.StringField(choices=[e.name for e in DataCollectionMode])
     status = mongo.StringField(choices=[e.name for e in StageStatus])
-    log_files = mongo.ListField(mongo.StringField())
+    log_file = mongo.StringField()

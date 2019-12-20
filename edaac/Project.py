@@ -45,13 +45,12 @@ class Project(mongo.Document):
                 if tool is not None:
                     if stage.tool.version in tool['versions']:
                         logger.info('%s parser successfully loaded', stage.tool.name)
-                        for log_file in stage.log_files:
-                            stage.metrics = tool['versions'][stage.tool.version](log_file)
+                        stage.metrics = tool['versions'][stage.tool.version](stage.log_file)
                     else:
                         logger.warn('Tool %s is recognized, but version %s is not registered - will use default version %s', \
                             stage.tool.name, stage.tool.version, tool['default_version'])
-                        for log_file in stage.log_files:
-                            stage.metrics = tool['versions'][tool['default_version']](log_file)
+                        stage.metrics = tool['versions'][tool['default_version']](stage.log_file)
+                            
                 else:
                     logger.error('Tool %s is not recognized!', stage.tool.name)
                     exit()

@@ -19,8 +19,6 @@ The goal of EDAAC is to make it painless to perform the following tasks:
 
 ## Getting Started
 
-A full documentation can be found at [url](#)
-
 ### Understand the Architecture
 TBC
 
