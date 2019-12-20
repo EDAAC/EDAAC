@@ -9,6 +9,8 @@ However, there currently exists no solution that makes it easy to collect, store
 **EDA Analytics Central (EDAAC)** addresses this problem by building on top of a previously well-studied data collection specification, called METRICS [1, 2].
 The goal of EDAAC is to make it painless to perform the following tasks:
 
+![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/edaac-functions.png)
+
 1. Data Collection:
     * _Passive collection (aka: Log file mining)_: using scripts (shell tools + python) to extract metrics from log files after a flow finishes.
     * _Active Collection (i.e. Data model extraction)_: using middle-layer functions that extract from data models (i.e. OpenDB) during a flow run.
@@ -16,8 +18,6 @@ The goal of EDAAC is to make it painless to perform the following tasks:
 3. Data Querying: 
     * _Offline usage_: the flow has run and ended, metrics are stored (either passively or actively). This supports ML around tools.
     * _Online usage_: the flow is currently running and a tool wants to take a decision based on a collected metric during the flow run. This supports ML in tools.
-
-![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/edaac-functions.png)
 
 ## Getting Started
 
