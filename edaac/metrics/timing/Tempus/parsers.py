@@ -26,11 +26,11 @@ def parse_19_10_p002_1(log_file_name):
 
     try:
         with open(log_file_name, 'r') as f:
-            for line in f:
-                if line.startswith('- Arrival Time'):
-                    arrival_time = re.findall(r'-?\d+\.?\d*', line)[0]
-                    metrics['arrival_time'] = float(arrival_time)
-                    break
+            lines = f.readlines()
+            arrival_time_lines = list(filter(lambda l: '- Arrival Time' in l, lines))
+            arrival_time = re.findall(r'-?\d+\.?\d*', arrival_time_lines[0])[0]
+            metrics['arrival_time'] = float(arrival_time)
+            
             logger.info('Successfully extracted metrics from %s', log_file_name)
 
     except Exception as e:

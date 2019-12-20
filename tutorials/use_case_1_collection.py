@@ -2,7 +2,7 @@ import os
 import mongoengine as mongo
 import edaac
 
-mongo.connect('edaac_db')
+mongo.connect('use_case_1')
 
 data_dir = os.path.join(os.getenv('HOME'), 'Desktop', 'use_case_1')
 benchmarks = [os.path.join(data_dir, o) for o in os.listdir(data_dir) \
