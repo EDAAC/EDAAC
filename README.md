@@ -17,7 +17,7 @@ The goal of EDAAC is to make it painless to perform the following tasks:
     * _Offline usage_: the flow has run and ended, metrics are stored (either passively or actively). This supports ML around tools.
     * _Online usage_: the flow is currently running and a tool wants to take a decision based on a collected metric during the flow run. This supports ML in tools.
 
-![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/edaac-function.png)
+![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/edaac-functions.png)
 
 ## Getting Started
 
