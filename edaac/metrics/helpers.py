@@ -18,7 +18,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 from collections import defaultdict
-import edaac.metrics.logic_synthesis as ls
+import edaac.metrics.synth as ls
 import edaac.metrics.timing as timing
 
 __available_tools__ = defaultdict(lambda: None)
