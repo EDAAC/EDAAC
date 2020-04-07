@@ -1,4 +1,4 @@
-# EDA Analytics Central <img align="right" width="10%" src="https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/logo.png">
+# EDA Analytics Central <img align="right" width="10%" src="https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/docs/img/logo.png">
 
 ## The Problem
 While there is an _art_ to chip design, measuring design processes can result in precious data that help advancing the _science_ of chip design.
@@ -9,7 +9,7 @@ However, there currently exists no solution that makes it easy to collect, store
 **EDA Analytics Central (EDAAC)** addresses this problem by building on top of a previously well-studied data collection specification, called METRICS [1, 2].
 The goal of EDAAC is to make it painless to perform the following tasks:
 
-![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/doc/img/edaac-functions.png)
+![](https://raw.githubusercontent.com/abdelrahmanhosny/EDAAC/master/docs/img/edaac-functions.png)
 
 1. Data Collection:
     * _Passive collection (aka: Log file mining)_: using scripts (shell tools + python) to extract metrics from log files after a flow finishes.
@@ -27,10 +27,7 @@ The goal of EDAAC is to make it painless to perform the following tasks:
 ```
 
 ### Tutorials
-We show the use of EDAAC through a series of tutorials.
-
-* Tutorial 1: [Passive data collection](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/tutorial_1_collect_data.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/use_case_1_collection.py)
-* Tutorial 2: [Querying metrics - offline usage](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/tutorial_2_analysis.py), [Use case](https://github.com/abdelrahmanhosny/EDAAC/blob/master/tutorials/use_case_1_analysis.py)
+To be updated ..
 
 
 ## License

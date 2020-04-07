@@ -22,9 +22,9 @@ setup(
   download_url = download_url,
   keywords = ['EDA', 'Electronic', 'Design', 'Automation', 'Data', 'Analytics'],
   install_requires=[
-    'mongoengine==0.18.2', 
-    'pymongo==3.10.0', 
-    'six==1.13.0',
+    'mongoengine==0.19.1', 
+    'pymongo==3.10.1', 
+    'six==1.14.0',
   ],
   classifiers=[
     'Development Status :: 3 - Alpha',      # Chose either "3 - Alpha", "4 - Beta" or "5 - Production/Stable" as the current state of your package

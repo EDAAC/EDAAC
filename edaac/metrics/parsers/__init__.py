@@ -17,29 +17,5 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-from collections import defaultdict
-import edaac.metrics.synth as ls
-import edaac.metrics.timing as timing
-
-__available_tools__ = defaultdict(lambda: None)
-__available_tools__['yosys'] =  {
-    'default_version': '0_8_576',
-    'versions': {
-        '0_8_576': ls.yosys.parse_0_8_567
-    }
-}
-__available_tools__['Tempus'] =  {
-    'default_version': '19_10_p002_1',
-    'versions': {
-        '19_10_p002_1': timing.Tempus.parse_19_10_p002_1
-    }
-}
-
-def registered_tool(tool_name):
-    global __available_tools__
-    return __available_tools__[tool_name]
-
-
-if __name__ == "__main__":
-    print(registered_tool('yosys'))
-    print(registered_tool('dummy'))
+from .innovus_drc_report import *
+from .innovus_timing_report import *
