@@ -20,20 +20,27 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 from edaac.log import get_logger
 import re
 
+
 def parse_innovus_timing_report(report_file_path):
     logger = get_logger()
-    metrics = {}
+    metrics = {
+        'timing_wns': None
+    }
 
     try:
         with open(report_file_path, 'r') as f:
-            lines = f.readlines()
-            arrival_time_lines = list(filter(lambda l: '- Arrival Time' in l, lines))
-            arrival_time = re.findall(r'-?\d+\.?\d*', arrival_time_lines[0])[0]
-            metrics['arrival_time'] = float(arrival_time)
-            
-            logger.info('Successfully extracted metrics from %s', report_file_path)
-
+            report = ''.join(f.readlines())
     except Exception as e:
-        logger.error('Can\'t read report file: %s. Skipping ..', report_file_path)
+        logger.error('Can\'t read report file: %s. Skipping ..',
+                     report_file_path)
+        return
+
+    # Open Nets
+    regex = '= Slack Time *(?P<slack>[0-9\.]*)'
+    m = re.search(regex, report)
+    if m:
+        metrics['timing_wns'] = float(m.group('slack'))
+
+    logger.info('Successfully extracted metrics from %s', report_file_path)
 
     return metrics
