@@ -20,7 +20,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import mongoengine as mongo
 import json
 from .Tool import Tool
-from .enum import StageStatus, DataCollectionMode
+from edaac.enum import StageStatus, DataCollectionMode
 
 class Stage(mongo.DynamicEmbeddedDocument):
     """

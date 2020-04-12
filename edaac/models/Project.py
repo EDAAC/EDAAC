@@ -21,7 +21,7 @@ import mongoengine as mongo
 from .Design import Design
 from .Technology import Technology
 from .Flow import Flow
-from .log import get_logger
+from edaac.log import get_logger
 
 class Project(mongo.Document):
     """
