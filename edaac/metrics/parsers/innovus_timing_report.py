@@ -36,7 +36,7 @@ def parse_innovus_timing_report(report_file_path):
         return
 
     # Open Nets
-    regex = '= Slack Time *(?P<slack>[0-9\.]*)'
+    regex = '= Slack Time *(?P<slack>[\-0-9\.]*)'
     m = re.search(regex, report)
     if m:
         metrics['timing_wns'] = float(m.group('slack'))
