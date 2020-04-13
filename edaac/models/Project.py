@@ -18,10 +18,11 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-from .Design import Design
-from .Technology import Technology
-from .Flow import Flow
-from .log import get_logger
+from edaac.models.Design import Design
+from edaac.models.Technology import Technology
+from edaac.models.Flow import Flow
+from edaac.log import get_logger
+
 
 class Project(mongo.Document):
     """
@@ -29,8 +30,5 @@ class Project(mongo.Document):
     """
     name = mongo.StringField(required=True, primary_key=True)
     description = mongo.StringField(max_length=100)
-    design = mongo.EmbeddedDocumentField(Design)
     technology = mongo.EmbeddedDocumentField(Technology)
     flows = mongo.ListField(mongo.EmbeddedDocumentField(Flow))
-
-        

@@ -19,14 +19,16 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import mongoengine as mongo
 
+
 class Design(mongo.EmbeddedDocument):
     """
     A class used to represent an Design used in a Project
     """
     name = mongo.StringField(required=True)
-    rtl_files = mongo.ListField(mongo.StringField(), required=True)
+    rtl_files = mongo.ListField(mongo.StringField())
+    netlist_file = mongo.StringField()
     sdc_file = mongo.StringField()
-    
+
     # Runsets: all RTL related tags for the release candidates
     runset_tag = mongo.StringField()
     runset_id = mongo.StringField()
@@ -40,4 +42,3 @@ class Design(mongo.EmbeddedDocument):
     # Amber -> alpha or beta release with some levels of verifications on
     # Green -> release candidate
     rtl_rag = mongo.StringField()
-    

@@ -18,9 +18,9 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-import json
-from .Tool import Tool
-from .enum import StageStatus, DataCollectionMode
+from edaac.models.Tool import Tool
+from edaac.enum import StageStatus, DataCollectionMode
+
 
 class Stage(mongo.DynamicEmbeddedDocument):
     """
@@ -29,9 +29,8 @@ class Stage(mongo.DynamicEmbeddedDocument):
     name = mongo.StringField()
     tool = mongo.EmbeddedDocumentField(Tool)
     machine = mongo.StringField()
-    collection_mode = mongo.StringField(choices=[e.name for e in DataCollectionMode])
+    collection_mode = mongo.StringField(
+        choices=[e.name for e in DataCollectionMode])
     status = mongo.StringField(choices=[e.name for e in StageStatus])
-    log_file = mongo.StringField()
-
-    def report_metrics(self):
-        return self.metrics
+    log_files = mongo.ListField(mongo.StringField())
+    metrics = mongo.DictField()
