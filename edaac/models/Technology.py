@@ -19,19 +19,19 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import mongoengine as mongo
 
+
 class Technology(mongo.EmbeddedDocument):
     """
     A class used to represent an Technology used in a Project
     """
     foundry = mongo.StringField()
-    process = mongo.StringField()   # e.g. 16nm
-    beol = mongo.StringField()      # back end of line: label that is given by the foundry; the metal stack
+    process = mongo.IntField()      # e.g. 16
+    # back end of line: label that is given by the foundry; the metal stack
+    beol = mongo.StringField()
     track = mongo.StringField()     # the heights of the track
     opv = mongo.StringField()       # operating voltage
-    vt = mongo.StringField()        # Vt 
+    vt = mongo.StringField()        # Vt
     channel_width = mongo.StringField()
     config = mongo.StringField()
     version = mongo.StringField()
     rag = mongo.StringField()
-
-        

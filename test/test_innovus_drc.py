@@ -3,10 +3,15 @@ import os
 import pathlib
 
 from edaac.metrics.parsers import parse_innovus_drc_report
+from edaac.log import get_logger
+
+logger = get_logger()
 
 
 class TestInnovusDRC1(unittest.TestCase):
     def test(self):
+        report_file = os.path.join(pathlib.Path(
+            __file__).parent.absolute(), 'data', 'drc1.rpt')
         metrics = {
             'drv_total': 22,
             'drv_short_metal_total': 3,
@@ -21,13 +26,18 @@ class TestInnovusDRC1(unittest.TestCase):
             'drv_spacing_cut_total': 0,
             'drv_min_area_total': 10
         }
-        result = parse_innovus_drc_report(os.path.join(pathlib.Path(
-            __file__).parent.absolute(), 'data', 'drc1.rpt'))
-        self.assertDictEqual(metrics, result)
+
+        if os.path.exists(report_file):
+            result = parse_innovus_drc_report(report_file)
+            self.assertDictEqual(metrics, result)
+        else:
+            logger.warning('Skipping private DRC report file %s' % report_file)
 
 
 class TestInnovusDRC2(unittest.TestCase):
     def test(self):
+        report_file = os.path.join(pathlib.Path(
+            __file__).parent.absolute(), 'data', 'drc2.rpt')
         metrics = {
             'drv_total': 76,
             'drv_short_metal_total': 30,
@@ -42,13 +52,18 @@ class TestInnovusDRC2(unittest.TestCase):
             'drv_spacing_cut_total': 0,
             'drv_min_area_total': 14
         }
-        result = parse_innovus_drc_report(os.path.join(pathlib.Path(
-            __file__).parent.absolute(), 'data', 'drc2.rpt'))
-        self.assertDictEqual(metrics, result)
+
+        if os.path.exists(report_file):
+            result = parse_innovus_drc_report(report_file)
+            self.assertDictEqual(metrics, result)
+        else:
+            logger.warning('Skipping private DRC report file %s' % report_file)
 
 
 class TestInnovusDRC3(unittest.TestCase):
     def test(self):
+        report_file = os.path.join(pathlib.Path(
+            __file__).parent.absolute(), 'data', 'drc3.rpt')
         metrics = {
             'drv_total': 333,
             'drv_short_metal_total': 300,
@@ -63,14 +78,18 @@ class TestInnovusDRC3(unittest.TestCase):
             'drv_spacing_cut_total': 0,
             'drv_min_area_total': 19
         }
-        result = parse_innovus_drc_report(os.path.join(pathlib.Path(
-            __file__).parent.absolute(), 'data', 'drc3.rpt'))
-        self.assertDictEqual(metrics, result)
 
+        if os.path.exists(report_file):
+            result = parse_innovus_drc_report(report_file)
+            self.assertDictEqual(metrics, result)
+        else:
+            logger.warning('Skipping private DRC report file %s' % report_file)
 
 
 class TestInnovusDRC4(unittest.TestCase):
     def test(self):
+        report_file = os.path.join(pathlib.Path(
+            __file__).parent.absolute(), 'data', 'drc4.rpt')
         metrics = {
             'drv_total': 101,
             'drv_short_metal_total': 2,
@@ -85,7 +104,9 @@ class TestInnovusDRC4(unittest.TestCase):
             'drv_spacing_cut_total': 25,
             'drv_min_area_total': 57
         }
-        result = parse_innovus_drc_report(os.path.join(pathlib.Path(
-            __file__).parent.absolute(), 'data', 'drc4.rpt'))
-        self.assertDictEqual(metrics, result)
 
+        if os.path.exists(report_file):
+            result = parse_innovus_drc_report(report_file)
+            self.assertDictEqual(metrics, result)
+        else:
+            logger.warning('Skipping private DRC report file %s' % report_file)
