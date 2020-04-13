@@ -18,9 +18,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-from edaac.models.Design import Design
-from edaac.models.Technology import Technology
-from edaac.models.Flow import Flow
+from edaac.models.technology import Technology
+from edaac.models.flow import Flow
 from edaac.log import get_logger
 
 

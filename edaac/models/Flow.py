@@ -18,8 +18,8 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-from edaac.models.Stage import Stage
-from edaac.models.Design import Design
+from edaac.models.stage import Stage
+from edaac.models.design import Design
 
 
 class Flow(mongo.EmbeddedDocument):

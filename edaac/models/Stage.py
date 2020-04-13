@@ -18,7 +18,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
 import mongoengine as mongo
-from edaac.models.Tool import Tool
+from edaac.models.tool import Tool
 from edaac.enum import StageStatus, DataCollectionMode
 
 
