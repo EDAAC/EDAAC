@@ -61,8 +61,9 @@ def parse_innovus_drc_report(report_file_path):
     metrics['drv_short_metal_area'] = 0.0
     for match in matches:
         violation, bounds = match.strip().split('\n')
+        print(bounds)
         m = re.search(
-            '\((?P<x1>[0-9\. ]*),(?P<y1>[0-9\. ]*)\) +\((?P<x2>[0-9\. ]*),(?P<y2>[0-9\. ]*)\)', bounds)
+            '\((?P<x1>[\-0-9\. ]*),(?P<y1>[\-0-9\. ]*)\) +\((?P<x2>[\-0-9\. ]*),(?P<y2>[\-0-9\. ]*)\)', bounds)
         x1, x2 = float(m.group('x1').strip()), float(m.group('x2').strip())
         y1, y2 = float(m.group('y1').strip()), float(m.group('y2').strip())
         area = abs(x1 - x2) * abs(y1 - y2)
@@ -77,7 +78,7 @@ def parse_innovus_drc_report(report_file_path):
     for match in matches:
         violation, bounds = match.strip().split('\n')
         m = re.search(
-            '\((?P<x1>[0-9\. ]*),(?P<y1>[0-9\. ]*)\) +\((?P<x2>[0-9\. ]*),(?P<y2>[0-9\. ]*)\)', bounds)
+            '\((?P<x1>[\-0-9\. ]*),(?P<y1>[\-0-9\. ]*)\) +\((?P<x2>[\-0-9\. ]*),(?P<y2>[\-0-9\. ]*)\)', bounds)
         x1, x2 = float(m.group('x1').strip()), float(m.group('x2').strip())
         y1, y2 = float(m.group('y1').strip()), float(m.group('y2').strip())
         area = abs(x1 - x2) * abs(y1 - y2)
