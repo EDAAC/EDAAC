@@ -23,7 +23,7 @@ The goal of EDAAC is to make it painless to perform the following tasks:
 
 ### Install
 ```
-    $ pip install edaac
+$ pip install edaac
 ```
 
 ### Documentation
