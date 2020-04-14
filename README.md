@@ -23,11 +23,11 @@ The goal of EDAAC is to make it painless to perform the following tasks:
 
 ### Install
 ```
-> pip install edaac
+    $ pip install edaac
 ```
 
-### Tutorials
-To be updated ..
+### Documentation
+[https://edaac.readthedocs.io/en/latest/](https://edaac.readthedocs.io/en/latest/)
 
 
 ## License
