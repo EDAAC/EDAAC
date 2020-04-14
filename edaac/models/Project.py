@@ -25,7 +25,7 @@ from edaac.log import get_logger
 
 class Project(mongo.Document):
     """
-    A class used to represent an EDA project
+    A class used to represent an EDA project 
     """
     name = mongo.StringField(required=True, primary_key=True)
     description = mongo.StringField(max_length=100)

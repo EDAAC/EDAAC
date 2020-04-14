@@ -24,7 +24,7 @@ from edaac.models.design import Design
 
 class Flow(mongo.EmbeddedDocument):
     """
-    A class used to represent an RTL-to-GDS flow
+    A class used to represent an RTL-to-GDS flow 
     """
     flow_directory = mongo.StringField(required=True)
     design = mongo.EmbeddedDocumentField(Design)

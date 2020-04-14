@@ -22,7 +22,7 @@ import mongoengine as mongo
 
 class Design(mongo.EmbeddedDocument):
     """
-    A class used to represent an Design used in a Project
+    A class used to represent a Design used in a Project
     """
     name = mongo.StringField(required=True)
     rtl_files = mongo.ListField(mongo.StringField())

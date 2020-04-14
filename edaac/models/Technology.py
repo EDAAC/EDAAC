@@ -22,7 +22,7 @@ import mongoengine as mongo
 
 class Technology(mongo.EmbeddedDocument):
     """
-    A class used to represent an Technology used in a Project
+    A class used to represent a Technology used in a Project
     """
     foundry = mongo.StringField()
     process = mongo.IntField()      # e.g. 16

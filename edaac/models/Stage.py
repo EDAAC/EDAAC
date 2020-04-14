@@ -24,7 +24,7 @@ from edaac.enum import StageStatus, DataCollectionMode
 
 class Stage(mongo.DynamicEmbeddedDocument):
     """
-    A class used to represent an Stage in a Flow
+    A class used to represent a Stage in a Flow
     """
     name = mongo.StringField()
     tool = mongo.EmbeddedDocumentField(Tool)

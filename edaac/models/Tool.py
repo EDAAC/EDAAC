@@ -21,7 +21,7 @@ import mongoengine as mongo
 
 class Tool(mongo.EmbeddedDocument):
     """
-    A class used to represent an Stage in a Flow
+    A class used to represent a Stage in a Flow
     """
     name = mongo.StringField()
     version = mongo.StringField()
