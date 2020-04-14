@@ -32,5 +32,5 @@ test:
 check:
 	twine check dist/*
 
-publish:
+publish: clean build
 	twine upload dist/*
