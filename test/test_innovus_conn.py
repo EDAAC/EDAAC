@@ -32,4 +32,4 @@ class TestInnovusCONN2(unittest.TestCase):
             result = parse_innovus_conn_report(report_file)
             self.assertDictEqual(metrics, result)
         else:
-            logger.warning('Skipping private DRC report file %s' % report_file)
+            logger.warning('Skipping private Connectivity report file %s' % report_file)

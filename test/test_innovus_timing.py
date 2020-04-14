@@ -17,4 +17,4 @@ class TestInnovusTiming(unittest.TestCase):
             result = parse_innovus_timing_report(report_file)
             self.assertDictEqual(metrics, result)
         else:
-            logger.warning('Skipping private DRC report file %s' % report_file)
+            logger.warning('Skipping private Timing report file %s' % report_file)

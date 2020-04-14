@@ -20,3 +20,4 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 from .innovus_drc_report import *
 from .innovus_conn_report import *
 from .innovus_timing_report import *
+from .innovus_power_report import *
