@@ -1,6 +1,6 @@
-============================================
+===========================================
 EDA Analytics Central - User Documentation
-============================================
+===========================================
 
 **EDAAC** is a Python package to collect, store and analyze data coming out of EDA (*Electronic Design Automation*) Flows.
 

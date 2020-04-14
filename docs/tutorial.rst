@@ -28,9 +28,8 @@ simply use pip to install it like so::
 
 To verify the installation:
 
-.. code-block:: python
+.. code-block:: shell
 
-    $ python
     >>> import edaac
     >>> edaac.version()
     EDA Analytics Central (EDAAC) v0.0.11
