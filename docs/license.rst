@@ -1,3 +1,7 @@
+========
+License
+========
+
 EDA Analytics Central (EDAAC)
 
 Copyright (c) 2019, See AUTHORS

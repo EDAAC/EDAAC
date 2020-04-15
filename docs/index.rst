@@ -16,6 +16,9 @@ EDA Analytics Central - User Documentation
   The Full guide to EDAAC --- from collecting metrics to storing them,
   from querying for data to advanced analytics and *everything* between.
 
+:doc:`license`
+  EDAAC is open-source under BSD-3 license.
+
 Community
 ---------
 
@@ -45,6 +48,7 @@ pull request.
 
    tutorial
    guide/index
+   license
    
 
 Indices and tables
