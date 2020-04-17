@@ -7,4 +7,4 @@ User Guide
 
    installing
    collecting-metrics
-   data-storage
+   data-model
