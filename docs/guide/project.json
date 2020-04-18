@@ -13,23 +13,23 @@
         "version": "<Version>",
         "rag": "<Red | Amber | Green>"
     },
+    "design": {
+        "name": "<Design Name>",
+        "rtl_files": [
+            "<Absolute Path of verilog RTL file>",
+            "<Absolute Path of verilog RTL file>"
+        ],
+        "netlist_file": "<Absolute path of netlist file (after synthesis)>",
+        "sdc_file": "<Absolute path of constraints file (ins .sdc format)>",
+        "runset_tag": "<RTL related tags for the release candidates>",
+        "runset_id": "<ID of the release candidates>",
+        "rtl_config": "<Configuration of RTL>",
+        "rtl_tag": "<Tags for the RTL>",
+        "rtl_rag": "<Red | Amber | Green>"
+    },
     "flows": [
         {
             "flow_directory": "<Directory of the Flow>",
-            "design": {
-                "name": "<Design Name>",
-                "rtl_files": [
-                    "<Absolute Path of verilog RTL file>",
-                    "<Absolute Path of verilog RTL file>"
-                ],
-                "netlist_file": "<Absolute path of netlist file (after synthesis)>",
-                "sdc_file": "<Absolute path of constraints file (ins .sdc format)>",
-                "runset_tag": "<RTL related tags for the release candidates>",
-                "runset_id": "<ID of the release candidates>",
-                "rtl_config": "<Configuration of RTL>",
-                "rtl_tag": "<Tags for the RTL>",
-                "rtl_rag": "<Red | Amber | Green>"
-            },
             "params": {
                 "<Flow parameter>": "<value>",
                 "<Flow parameter>": "<value>"

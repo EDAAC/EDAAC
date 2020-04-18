@@ -19,7 +19,6 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 
 import mongoengine as mongo
 from edaac.models.stage import Stage
-from edaac.models.design import Design
 
 
 class Flow(mongo.EmbeddedDocument):
@@ -27,7 +26,6 @@ class Flow(mongo.EmbeddedDocument):
     A class used to represent an RTL-to-GDS flow 
     """
     flow_directory = mongo.StringField(required=True)
-    design = mongo.EmbeddedDocumentField(Design)
     params = mongo.DictField()
     stages = mongo.ListField(mongo.EmbeddedDocumentField(Stage))
     log_files = mongo.ListField(mongo.StringField())

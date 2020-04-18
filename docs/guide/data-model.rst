@@ -106,7 +106,7 @@ All other keys can be updated later by retrieving the project, modifying it and 
 .. code:: python
 
     import mongoengine as mongo
-    from edaac.models import Project, Technology
+    from edaac.models import Project, Technology, Design
 
     mongo.connect('test_db')
 
@@ -117,6 +117,12 @@ All other keys can be updated later by retrieving the project, modifying it and 
         technology=Technology(
             foundry='TestFoundry',
             process=45
+        ),
+        design=Design(
+            name='test-design',
+            rtl_files=['/path/to/rtl1.v', '/path/to/rtl2.v'],
+            netlist_file='/path/to/netlist.v',
+            sdc_file='/path/to/const.sdc'
         )
     )
     project.save()
@@ -139,15 +145,15 @@ The below code retrieves an existing project and updates its data.
     project = Project.objects(name='test-project-flows').first()
     self.assertIsNotNone(project)
 
+    project.design = Design(
+        name='test-design',
+        rtl_files=['/path/to/rtl1.v', '/path/to/rtl2.v'],
+        netlist_file='/path/to/netlist.v',
+        sdc_file='/path/to/const.sdc'
+    )
     project.flows.append(
         Flow(
             flow_directory='/path/to/flow/directory',
-            design=Design(
-                name='test-design',
-                rtl_files=['/path/to/rtl1.v', '/path/to/rtl2.v'],
-                netlist_file='/path/to/netlist.v',
-                sdc_file='/path/to/const.sdc'
-            ),
             params={
                 'param1': 'value1',
                 'param2': 'value2'

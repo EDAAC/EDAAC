@@ -20,6 +20,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 import mongoengine as mongo
 from edaac.models.technology import Technology
 from edaac.models.flow import Flow
+from edaac.models.design import Design
 from edaac.log import get_logger
 
 
@@ -30,4 +31,5 @@ class Project(mongo.Document):
     name = mongo.StringField(required=True, primary_key=True)
     description = mongo.StringField(max_length=100)
     technology = mongo.EmbeddedDocumentField(Technology)
+    design = mongo.EmbeddedDocumentField(Design)
     flows = mongo.ListField(mongo.EmbeddedDocumentField(Flow))

@@ -9,6 +9,7 @@ from edaac.log import get_logger
 
 logger = get_logger()
 
+
 class TestAddFlow(unittest.TestCase):
     def test_01(self):
         # assumes a localhost:27017 mongo instance
@@ -21,9 +22,8 @@ class TestAddFlow(unittest.TestCase):
         )
         result = project.save()
         mongo.disconnect()
-        
-        self.assertIsNotNone(result)
 
+        self.assertIsNotNone(result)
 
     def test_02(self):
         # assumes a localhost:27017 mongo instance
@@ -34,15 +34,15 @@ class TestAddFlow(unittest.TestCase):
         project = Project.objects(name='test-project-flows').first()
         self.assertIsNotNone(project)
 
+        project.design = Design(
+            name='test-design',
+            rtl_files=['/path/to/rtl1.v', '/path/to/rtl2.v'],
+            netlist_file='/path/to/netlist.v',
+            sdc_file='/path/to/const.sdc'
+        )
         project.flows.append(
             Flow(
                 flow_directory='/path/to/flow/directory',
-                design=Design(
-                    name='test-design',
-                    rtl_files=['/path/to/rtl1.v', '/path/to/rtl2.v'],
-                    netlist_file='/path/to/netlist.v',
-                    sdc_file='/path/to/const.sdc'
-                ),
                 params={
                     'param1': 'value1',
                     'param2': 'value2'
