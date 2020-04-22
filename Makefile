@@ -24,7 +24,7 @@ clean:
 	rm -rf build
 	
 build:
-	python setup.py sdist
+	python setup.py sdist bdist_wheel
 
 test:
 	python test.py
