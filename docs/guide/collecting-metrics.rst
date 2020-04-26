@@ -27,7 +27,7 @@ Supported Tools
 
 Usage
 ------
-1. Generate a report from Innovus using the :code:`verify_drc -report <report>` command.
+1. Generate a report from Innovus using the `instructions here <http://www.ispd.cc/contests/19/Instruction_to_generate_violation_report_by_Innovus_2019.pdf>`_.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
@@ -104,7 +104,7 @@ Supported Tools
 
 Usage
 ------
-1. Generate a report from Innovus using the :code:`verifyConnectivity -report <report>` command.
+1. Generate a report from Innovus using the `instructions here <http://www.ispd.cc/contests/19/Instruction_to_generate_violation_report_by_Innovus_2019.pdf>`_.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
@@ -166,7 +166,7 @@ Supported Tools
 
 Usage
 ------
-1. Generate a report from Innovus using the :code:`report_timing > <report>` command.
+1. Generate a report from Innovus using the `instructions here <http://www.ispd.cc/contests/19/Instruction_to_generate_violation_report_by_Innovus_2019.pdf>`_.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
@@ -209,7 +209,7 @@ Supported Tools
 
 Usage
 ------
-1. Generate a report from Innovus using the :code:`report_power -outfile <report>` command.
+1. Generate a report from Innovus using the `instructions here <http://www.ispd.cc/contests/19/Instruction_to_generate_violation_report_by_Innovus_2019.pdf>`_.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
