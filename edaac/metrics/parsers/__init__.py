@@ -21,3 +21,4 @@ from .innovus_drc_report import *
 from .innovus_conn_report import *
 from .innovus_timing_report import *
 from .innovus_power_report import *
+from .innovus_log import *

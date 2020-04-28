@@ -21,26 +21,38 @@ from edaac.log import get_logger
 import re
 
 
-def parse_innovus_timing_report(report_file_path):
+def _time_string_to_seconds(time):
+    hour, minute, second = list(map(int, time.split(':')))
+    return second + minute*60 + hour*60*60
+
+def _time_string_to_minutes(time):
+    hour, minute, second = list(map(int, time.split(':')))
+    return second/60.0 + minute + hour*60
+
+def parse_innovus_log(log_file_path):
     logger = get_logger()
     metrics = {
-        'timing_wns': None
+        'compute_cpu_time_total': None,
+        'compute_real_time_total': None,
+        'compute_mem_total': None
     }
 
     try:
-        with open(report_file_path, 'r') as f:
+        with open(log_file_path, 'r') as f:
             report = ''.join(f.readlines())
     except Exception as e:
         logger.error('Can\'t read report file: %s. Skipping ..',
-                     report_file_path)
+                     log_file_path)
         return
 
-    # Slack
-    regex = '= Slack Time *(?P<slack>[\-0-9\.]*)'
+    # Stats
+    regex = '--- Ending \"Innovus\" \(totcpu=(?P<cpu_total>[\-0-9\.:]*), real=(?P<time_total>[\-0-9\.:]*), mem=(?P<mem_total>[\-0-9\.]*)M\) ---'
     m = re.search(regex, report)
     if m:
-        metrics['timing_wns'] = float(m.group('slack'))
+        metrics['compute_cpu_time_total'] = _time_string_to_seconds(m.group('cpu_total')) 
+        metrics['compute_real_time_total'] = _time_string_to_seconds(m.group('time_total'))
+        metrics['compute_mem_total'] = float(m.group('mem_total'))
 
-    logger.info('Successfully extracted metrics from %s', report_file_path)
+    logger.info('Successfully extracted metrics from %s', log_file_path)
 
     return metrics
