@@ -258,3 +258,53 @@ Example
         'power_switching_percentage': 35.1443,
         'power_leakage_percentage': 22.0805
     }
+
+
+Compute Resources
+==================
+
+This reports the compute resources (cpu, memory) used by a flow process.
+
+Supported Tools
+----------------
+- Cadence Innovus
+
+Usage
+------
+1. Dump Innovus logs (that are shown on stdout) to a file.
+2. Use :code:`edaac.metrics.parsers` to parse the report.
+
+    .. code:: python
+
+        from edaac.metrics.parsers import parse_innovus_log
+        metrics = parse_innovus_log('/path/to/report')
+
+3. :code:`metrics` is a Python dictionary of :code:`key: value` pairs.
+
+    .. code:: python
+
+        print(metrics)
+
+Dictionary
+----------
+
++------------------------------------+-----------------------------------------+
+|    Key                             | Meaning                                 |
++====================================+=========================================+
+| :code:`compute_cpu_time_total`     | Total time from all CPU cores (seconds) |
++------------------------------------+-----------------------------------------+
+| :code:`compute_real_time_total`    | Total wall clock time (seconds)         |
++------------------------------------+-----------------------------------------+
+| :code:`compute_mem_total`          | Total memory Usage                      |
++------------------------------------+-----------------------------------------+
+
+Example
+---------
+
+.. code:: python
+
+    metrics = {
+        'compute_cpu_time_total': 540,
+        'compute_real_time_total':184,
+        'compute_mem_total': 2287.4
+    }
