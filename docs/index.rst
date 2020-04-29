@@ -19,6 +19,9 @@ EDA Analytics Central - User Documentation
 :doc:`license`
   EDAAC is open-source under BSD-3 license.
 
+:doc:`feedback`
+  EDAAC is community-driven. Please, share with us your feedback and feature requests.
+
 Community
 ---------
 
@@ -49,6 +52,7 @@ pull request.
    tutorial
    guide/index
    license
+   feedback
    
 
 Indices and tables
