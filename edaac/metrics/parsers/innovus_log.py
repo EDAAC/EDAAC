@@ -22,11 +22,11 @@ import re
 
 
 def _time_string_to_seconds(time):
-    hour, minute, second = list(map(int, time.split(':')))
+    hour, minute, second = list(map(float, time.split(':')))
     return second + minute*60 + hour*60*60
 
 def _time_string_to_minutes(time):
-    hour, minute, second = list(map(int, time.split(':')))
+    hour, minute, second = list(map(float, time.split(':')))
     return second/60.0 + minute + hour*60
 
 def parse_innovus_log(log_file_path):
