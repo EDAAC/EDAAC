@@ -11,8 +11,10 @@ class TestInnovusLog(unittest.TestCase):
             pathlib.Path(__file__).parent.absolute(), 'data', 'compute1.log')
         metrics = {
             'compute_cpu_time_total': 540,
-            'compute_real_time_total':184,
-            'compute_mem_total': 2287.4
+            'compute_real_time_total': 184,
+            'compute_mem_total': 2287.4,
+            'area_stdcell': 118576,
+            'area_total': 164502
         }
 
         if os.path.exists(log_file):

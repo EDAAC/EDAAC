@@ -23,18 +23,20 @@ import re
 
 def _time_string_to_seconds(time):
     hour, minute, second = list(map(float, time.split(':')))
-    return second + minute*60 + hour*60*60
+    return int(second + minute*60 + hour*60*60)
 
 def _time_string_to_minutes(time):
     hour, minute, second = list(map(float, time.split(':')))
-    return second/60.0 + minute + hour*60
+    return int(second/60.0 + minute + hour*60)
 
 def parse_innovus_log(log_file_path):
     logger = get_logger()
     metrics = {
         'compute_cpu_time_total': None,
         'compute_real_time_total': None,
-        'compute_mem_total': None
+        'compute_mem_total': None,
+        'area_stdcell': None,
+        'area_total': None
     }
 
     try:
@@ -52,6 +54,17 @@ def parse_innovus_log(log_file_path):
         metrics['compute_cpu_time_total'] = _time_string_to_seconds(m.group('cpu_total')) 
         metrics['compute_real_time_total'] = _time_string_to_seconds(m.group('time_total'))
         metrics['compute_mem_total'] = float(m.group('mem_total'))
+    
+    # Area
+    regex = ' *= stdcell_area (?P<stdcell_area>[0-9\.]*).*'
+    m = re.search(regex, report)
+    if m:
+        metrics['area_stdcell'] = int(float(m.group('stdcell_area')))
+    
+    regex = '.*total area (?P<total_area>[0-9\.]*).*'
+    m = re.search(regex, report)
+    if m:
+        metrics['area_total'] = int(float(m.group('total_area')))
 
     logger.info('Successfully extracted metrics from %s', log_file_path)
 
