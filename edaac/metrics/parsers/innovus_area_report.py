@@ -20,7 +20,7 @@ OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 from edaac.log import get_logger
 import re
 
-def parse_innovus_area(log_file_path):
+def parse_innovus_area_report(log_file_path):
     logger = get_logger()
     metrics = {
         'area_stdcell': None,

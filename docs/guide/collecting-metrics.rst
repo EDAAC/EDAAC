@@ -283,7 +283,7 @@ Usage
     .. code:: python
 
         from edaac.metrics.parsers import parse_innovus_area
-        metrics = parse_innovus_area('/path/to/report')
+        metrics = parse_innovus_area_report('/path/to/report')
 
 3. :code:`metrics` is a Python dictionary of :code:`key: value` pairs.
 
@@ -348,7 +348,7 @@ Dictionary
 +------------------------------------+-----------------------------------------+
 | :code:`compute_real_time_total`    | Total wall clock time (seconds)         |
 +------------------------------------+-----------------------------------------+
-| :code:`compute_mem_total`          | Total memory Usage                      |
+| :code:`compute_mem_total`          | Total memory usage (MB)                 |
 +------------------------------------+-----------------------------------------+
 
 Example
