@@ -56,14 +56,10 @@ def parse_innovus_log(log_file_path):
         metrics['compute_mem_total'] = float(m.group('mem_total'))
     
     # Area
-    regex = ' *= stdcell_area (?P<stdcell_area>[0-9\.]*).*'
+    regex = ' *= stdcell_area [0-9\.]* sites \((?P<stdcell_area>[0-9\.]*) um\^2\) \/ alloc_area [0-9\.]* sites \((?P<total_area>[0-9\.]*) um\^2\).*'
     m = re.search(regex, report)
     if m:
         metrics['area_stdcell'] = int(float(m.group('stdcell_area')))
-    
-    regex = '.*total area (?P<total_area>[0-9\.]*).*'
-    m = re.search(regex, report)
-    if m:
         metrics['area_total'] = int(float(m.group('total_area')))
 
     logger.info('Successfully extracted metrics from %s', log_file_path)

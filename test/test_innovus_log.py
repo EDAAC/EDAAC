@@ -13,8 +13,8 @@ class TestInnovusLog(unittest.TestCase):
             'compute_cpu_time_total': 540,
             'compute_real_time_total': 184,
             'compute_mem_total': 2287.4,
-            'area_stdcell': 118576,
-            'area_total': 164502
+            'area_stdcell': 56916,
+            'area_total': 78139
         }
 
         if os.path.exists(log_file):

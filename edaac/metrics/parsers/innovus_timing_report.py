@@ -24,7 +24,9 @@ import re
 def parse_innovus_timing_report(report_file_path):
     logger = get_logger()
     metrics = {
-        'timing_wns': None
+        'timing_wns': None,
+        'timing_tns': None,
+        'timing_violating_paths': None
     }
 
     try:
@@ -36,10 +38,20 @@ def parse_innovus_timing_report(report_file_path):
         return
 
     # Slack
-    regex = '= Slack Time *(?P<slack>[\-0-9\.]*)'
+    regex = 'Total negative slacks\(TNS\)= *(?P<tns>[\-\.0-9]*).*'
     m = re.search(regex, report)
     if m:
-        metrics['timing_wns'] = float(m.group('slack'))
+        metrics['timing_tns'] = float(m.group('tns'))
+    
+    regex = 'Worst negative slacks\(WNS\)= *(?P<wns>[\-\.0-9]*).*'
+    m = re.search(regex, report)
+    if m:
+        metrics['timing_wns'] = float(m.group('wns'))
+    
+    regex = 'Number of timing violation paths= *(?P<paths>[0-9]*).*'
+    m = re.search(regex, report)
+    if m:
+        metrics['timing_violating_paths'] = int(m.group('paths'))
 
     logger.info('Successfully extracted metrics from %s', report_file_path)
 

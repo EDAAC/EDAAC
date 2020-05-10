@@ -8,9 +8,11 @@ from edaac.metrics.parsers import parse_innovus_timing_report
 class TestInnovusTiming(unittest.TestCase):
     def test(self):
         report_file = os.path.join(
-            pathlib.Path(__file__).parent.absolute(), 'data', 'timing1.rpt')
+            pathlib.Path(__file__).parent.absolute(), 'data', 'timing2.rpt')
         metrics = {
-            'timing_wns': -65.967
+            'timing_tns': -27.496,
+            'timing_wns': -0.851,
+            'timing_violating_paths': 35
         }
 
         if os.path.exists(report_file):
