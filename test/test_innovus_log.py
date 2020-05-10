@@ -3,6 +3,9 @@ import os
 import pathlib
 
 from edaac.metrics.parsers import parse_innovus_log
+from edaac.log import get_logger
+
+logger = get_logger()
 
 
 class TestInnovusLog(unittest.TestCase):
@@ -21,4 +24,4 @@ class TestInnovusLog(unittest.TestCase):
             result = parse_innovus_log(log_file)
             self.assertDictEqual(metrics, result)
         else:
-            logger.warning('Skipping private Power report file %s' % log_file)
+            logger.warning('Skipping private log report file %s' % log_file)

@@ -17,9 +17,31 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 '''
 
-from .innovus_drc_report import *
-from .innovus_conn_report import *
-from .innovus_timing_report import *
-from .innovus_power_report import *
-from .innovus_log import *
-from .innovus_area_report import *
+from edaac.log import get_logger
+import re
+
+def parse_innovus_area(log_file_path):
+    logger = get_logger()
+    metrics = {
+        'area_stdcell': None,
+        'area_stdcell_count': None
+    }
+
+    try:
+        with open(log_file_path, 'r') as f:
+            report = ''.join(f.readlines())
+    except Exception as e:
+        logger.error('Can\'t read report file: %s. Skipping ..',
+                     log_file_path)
+        return
+
+    # Area
+    regex = '[-]*\n[a-zA-Z\_ ]*(?P<area_stdcell_count>[0-9]+) *(?P<area_stdcell>[0-9\.]+).*'
+    m = re.search(regex, report)
+    if m:
+        metrics['area_stdcell'] = float(m.group('area_stdcell')) 
+        metrics['area_stdcell_count'] = int(m.group('area_stdcell_count')) 
+
+    logger.info('Successfully extracted metrics from %s', log_file_path)
+
+    return metrics

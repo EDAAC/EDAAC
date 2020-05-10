@@ -166,7 +166,7 @@ Supported Tools
 
 Usage
 ------
-1. Generate a report from Innovus using the `instructions here <http://www.ispd.cc/contests/19/Instruction_to_generate_violation_report_by_Innovus_2019.pdf>`_.
+1. Generate a report from Innovus using the appropriate command.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
@@ -183,11 +183,15 @@ Usage
 Dictionary
 ----------
 
-+--------------------+-----------------------------------------------------------------+
-|    Key             | Meaning                                                         |
-+====================+=================================================================+
-| :code:`timing_wns` | Worst negative slack                                            |
-+--------------------+-----------------------------------------------------------------+
++--------------------------------+-----------------------------------------------------+
+|    Key                         | Meaning                                             |
++================================+=====================================================+
+| :code:`timing_wns`             | Worst negative slack                                |
++--------------------------------+-----------------------------------------------------+
+| :code:`timing_tns`             | Total negative slack                                |
++--------------------------------+-----------------------------------------------------+
+| :code:`timing_violating_paths` | Number of violating paths                           |
++--------------------------------+-----------------------------------------------------+
 
 Example
 -------
@@ -195,7 +199,9 @@ Example
 .. code:: python
 
     metrics = {
-        'timing_wns': -65.967
+        'timing_tns': -27.496,
+        'timing_wns': -0.851,
+        'timing_violating_paths': 35
     }
 
 Power
@@ -209,7 +215,7 @@ Supported Tools
 
 Usage
 ------
-1. Generate a report from Innovus using the `instructions here <http://www.ispd.cc/contests/19/Instruction_to_generate_violation_report_by_Innovus_2019.pdf>`_.
+1. Generate a report from Innovus using the appropriate command.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
@@ -257,6 +263,53 @@ Example
         'power_internal_percentage': 42.7752,
         'power_switching_percentage': 35.1443,
         'power_leakage_percentage': 22.0805
+    }
+
+
+Area
+=====
+
+This reports the area of the standard cells in addition to the cell count.
+
+Supported Tools
+----------------
+- Cadence Innovus
+
+Usage
+------
+1. Generate the area report from Innovus using the appropriate command.
+2. Use :code:`edaac.metrics.parsers` to parse the report.
+
+    .. code:: python
+
+        from edaac.metrics.parsers import parse_innovus_area
+        metrics = parse_innovus_area('/path/to/report')
+
+3. :code:`metrics` is a Python dictionary of :code:`key: value` pairs.
+
+    .. code:: python
+
+        print(metrics)
+
+Dictionary
+----------
+
++------------------------------------+-----------------------------------------+
+|    Key                             | Meaning                                 |
++====================================+=========================================+
+| :code:`area_stdcell`               | Total area of standard cells (um^2)     |
++------------------------------------+-----------------------------------------+
+| :code:`area_stdcell_count`         | Total number of standard cells          |
++------------------------------------+-----------------------------------------+
+
+Example
+---------
+
+.. code:: python
+
+    metrics = {
+        'area_stdcell': 48191.040,
+        'area_stdcell_count': 11306
     }
 
 

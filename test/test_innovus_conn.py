@@ -3,6 +3,9 @@ import os
 import pathlib
 
 from edaac.metrics.parsers import parse_innovus_conn_report
+from edaac.log import get_logger
+
+logger = get_logger()
 
 
 class TestInnovusCONN1(unittest.TestCase):
@@ -32,4 +35,5 @@ class TestInnovusCONN2(unittest.TestCase):
             result = parse_innovus_conn_report(report_file)
             self.assertDictEqual(metrics, result)
         else:
-            logger.warning('Skipping private Connectivity report file %s' % report_file)
+            logger.warning(
+                'Skipping private Connectivity report file %s' % report_file)
