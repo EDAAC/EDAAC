@@ -6,3 +6,4 @@ from .test_innovus_area import *
 from .test_innovus_log import *
 from .test_initialize_project import *
 from .test_add_flow import *
+from .test_yosys_log import *
