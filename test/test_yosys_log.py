@@ -14,6 +14,7 @@ class TestYosysLog(unittest.TestCase):
             pathlib.Path(__file__).parent.absolute(), 'data', '1_1_yosys.log')
 
         metrics = {
+            'run__synth__yosys_version': '0.9+1706 (git sha1 UNKNOWN, gcc 7.3.1 -fPIC -Os)',
             'synth__inst__num__total': 272,
             'synth__inst__stdcell__area__total': 407.512000,
             'synth__wire__num__total': 297,

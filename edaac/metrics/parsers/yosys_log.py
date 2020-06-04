@@ -24,6 +24,7 @@ import re
 def parse_yosys_log(log_file_path):
     logger = get_logger()
     metrics = {
+        'run__synth__yosys_version': None,
         'synth__inst__num__total': None,
         'synth__inst__stdcell__area__total': None,
         'synth__wire__num__total': None,
@@ -43,6 +44,12 @@ def parse_yosys_log(log_file_path):
         logger.error('Can\'t read report file: %s. Skipping ..',
                      log_file_path)
         return
+
+    # version
+    regex = 'Yosys (?P<yosys_version>[0-9]+.*)\n'
+    m = re.search(regex, report)
+    if m:
+        metrics['run__synth__yosys_version'] = m.group('yosys_version')
 
     # number of cell instances
     regex = '.*Number of cells: *(?P<number_of_cells>[0-9]*).*'
