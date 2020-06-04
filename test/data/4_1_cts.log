@@ -1,0 +1,165 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/3_place.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 439 components and 1948 component-terminals.
+Notice 0:     Created 2 special nets and 878 connections.
+Notice 0:     Created 396 nets and 1070 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/3_place.def
+
+==========================================================================
+report_checks
+--------------------------------------------------------------------------
+Startpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _512_/CK (DFF_X1)
+   0.09    0.09 ^ _512_/Q (DFF_X1)
+   0.04    0.12 ^ _305_/Z (CLKBUF_X2)
+   0.05    0.18 ^ _308_/Z (XOR2_X2)
+   0.02    0.20 v _311_/ZN (AOI21_X1)
+   0.05    0.25 ^ _312_/ZN (OAI21_X1)
+   0.03    0.27 v _315_/ZN (AOI21_X1)
+   0.05    0.32 ^ _316_/ZN (OAI21_X1)
+   0.03    0.35 v _319_/ZN (AOI21_X1)
+   0.04    0.39 ^ _320_/ZN (OAI21_X1)
+   0.03    0.42 v _322_/ZN (OAI21_X1)
+   0.05    0.47 ^ _324_/ZN (OAI21_X1)
+   0.03    0.50 v _325_/ZN (OAI21_X1)
+   0.06    0.55 ^ _327_/ZN (OAI21_X1)
+   0.04    0.60 v _328_/ZN (OAI221_X1)
+   0.05    0.64 v _329_/ZN (AND3_X1)
+   0.06    0.70 ^ _330_/ZN (OAI22_X1)
+   0.03    0.73 v _331_/ZN (AOI21_X1)
+   0.05    0.79 ^ _332_/ZN (OAI21_X2)
+   0.03    0.82 v _427_/ZN (NAND3_X1)
+   0.07    0.89 v _430_/ZN (OR2_X1)
+   0.04    0.93 v _431_/Z (BUF_X2)
+   0.05    0.97 ^ _436_/ZN (OAI221_X1)
+   0.00    0.97 ^ _512_/D (DFF_X1)
+           0.97   data arrival time
+
+  10.00   10.00   clock core_clock (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+          10.00 ^ _512_/CK (DFF_X1)
+  -0.04    9.96   library setup time
+           9.96   data required time
+---------------------------------------------------------
+           9.96   data required time
+          -0.97   data arrival time
+---------------------------------------------------------
+           8.99   slack (MET)
+
+
+ *****************
+ * TritonCTS 2.0 *
+ *****************
+ *****************************
+ *  Import characterization  *
+ *****************************
+ Reading LUT file "./platforms/nangate45/tritonCTS/lut.txt"
+    Min. len    Max. len    Min. cap    Max. cap   Min. slew   Max. slew
+           2           8           1          52           1          24
+    [WARNING] 180 wires are pure wire and no slew degration.
+    TritonCTS forced slew degradation on these wires.
+    Num wire segments: 4994
+    Num keys in characterization LUT: 1677
+    Actual min input cap: 8
+ Reading solution list file "./platforms/nangate45/tritonCTS/sol_list.txt"
+ **********************
+ *  Find clock roots  *
+ **********************
+ User did not specify clock roots.
+ ************************
+ *  Populate TritonCTS  *
+ ************************
+ Initializing clock nets
+ Looking for clock nets in the design
+ Net "clk" found
+ Initializing clock net for : "clk"
+ Clock net "clk" has 35 sinks
+ TritonCTS found 1 clock nets.
+ ****************************
+ *  Check characterization  *
+ ****************************
+    The chacterization used 1 buffer(s) types. All of them are in the loaded DB.
+ ***********************
+ *  Build clock trees  *
+ ***********************
+ Generating H-Tree topology for net clk...
+    Tot. number of sinks: 35
+ Wire segment unit: 20000 dbu (10 um)
+ Original sink region: [(57950, 60030), (145350, 147170)]
+ Normalized sink region: [(2.8975, 3.0015), (7.2675, 7.3585)]
+    Width:  4.37
+    Height: 4.357
+ [WARNING] Creating fake entries in the LUT.
+ Level 1
+    Direction: Horizontal
+    # sinks per sub-region: 18
+    Sub-region size: 2.185 X 4.357
+    Segment length (rounded): 1
+    Key: 5029 outSlew: 12 load: 1 length: 1 isBuffered: 1
+ Level 2
+    Direction: Vertical
+    # sinks per sub-region: 9
+    Sub-region size: 2.185 X 2.1785
+    Segment length (rounded): 1
+    Key: 5039 outSlew: 12 load: 1 length: 1 isBuffered: 1
+ Stop criterion found. Max number of sinks is (15)
+ Building clock sub nets...
+ Number of sinks covered: 35
+ Clock topology of net "clk" done.
+ ****************
+ * Post CTS opt *
+ ****************
+ Avg. source sink dist: 32210.5 dbu.
+ Num outlier sinks: 0
+ ********************
+ * Write data to DB *
+ ********************
+ Writing clock net "clk" to DB
+    Created 7 clock buffers.
+    Created 7 clock nets.
+ ... End of TritonCTS execution.
+Design Stats
+--------------------------------
+total instances           446
+multi row instances         0
+fixed instances           114
+nets                      405
+design area            6398.4 u^2
+fixed area               30.3 u^2
+movable area            467.1 u^2
+utilization                 7 %
+utilization padded         10 %
+rows                       57
+row height                1.4 u
+
+Placement Analysis
+--------------------------------
+total displacement        5.9 u
+average displacement      0.0 u
+max displacement          1.7 u
+original HPWL          6116.4 u
+legalized HPWL         6118.3 u
+delta HPWL                  0 %
+
+0:00.82elapsed 100%CPU 55460memKB

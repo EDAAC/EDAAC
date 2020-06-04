@@ -1,0 +1,672 @@
+
+reading lef ...
+add shortConstraint to layer via1
+add shortConstraint to layer via2
+add shortConstraint to layer via3
+add shortConstraint to layer via4
+add shortConstraint to layer via5
+add shortConstraint to layer via6
+add shortConstraint to layer via7
+add shortConstraint to layer via8
+add shortConstraint to layer via9
+
+units:       2000
+#layers:     19
+#macros:     134
+#vias:       27
+#viarulegen: 19
+
+reading def ...
+
+design:      gcd
+die area:    ( 0 0 ) ( 200260 201600 )
+trackPts:    20
+defvias:     6
+#components: 1974
+#terminals:  54
+#snets:      2
+#nets:       403
+
+reading guide ...
+
+#guides:     2615
+List of default vias:
+  Layer via1
+    default via: via1_7
+  Layer via2
+    default via: via2_5
+  Layer via3
+    default via: via3_2
+  Layer via4
+    default via: via4_0
+  Layer via5
+    default via: via5_0
+  Layer via6
+    default via: via6_0
+  Layer via7
+    default via: via7_0
+  Layer via8
+    default via: via8_0
+  Layer via9
+    default via: via9_0
+
+libcell analysis ...
+
+instance analysis ...
+#unique instances = 65
+
+init region query ...
+  complete metal1
+  complete via1
+  complete metal2
+  complete via2
+  complete metal3
+  complete via3
+  complete metal4
+  complete via4
+  complete metal5
+  complete via5
+  complete metal6
+  complete via6
+  complete metal7
+  complete via7
+  complete metal8
+  complete via8
+  complete metal9
+  complete via9
+  complete metal10
+
+metal1 shape region query size = 8830
+via1 shape region query size = 261
+metal2 shape region query size = 198
+via2 shape region query size = 261
+metal3 shape region query size = 204
+via3 shape region query size = 261
+metal4 shape region query size = 96
+via4 shape region query size = 60
+metal5 shape region query size = 12
+via5 shape region query size = 60
+metal6 shape region query size = 12
+via6 shape region query size = 30
+metal7 shape region query size = 10
+via7 shape region query size = 0
+metal8 shape region query size = 0
+via8 shape region query size = 0
+metal9 shape region query size = 0
+via9 shape region query size = 0
+metal10 shape region query size = 0
+
+
+start pin access
+  complete 100 pins
+  complete 194 pins
+  complete 53 unique inst patterns
+  complete 332 groups
+#scanned instances    = 1974
+#unique  instances    = 65
+#stdCellGenAp         = 1015
+#stdCellValidPlanarAp = 801
+#stdCellValidViaAp    = 841
+#stdCellPinNoAp       = 0
+#macroGenAp           = 0
+#macroValidPlanarAp   = 0
+#macroValidViaAp      = 0
+#macroNoAp            = 0
+
+complete pin access
+cpu time = 00:00:01, elapsed time = 00:00:01, memory = 6.73 (MB), peak = 6.84 (MB)
+
+post process guides ...
+GCELLGRID X 0 DO 48 STEP 4200 ;
+GCELLGRID Y 0 DO 47 STEP 4200 ;
+  complete metal1
+  complete via1
+  complete metal2
+  complete via2
+  complete metal3
+  complete via3
+  complete metal4
+  complete via4
+  complete metal5
+  complete via5
+  complete metal6
+  complete via6
+  complete metal7
+  complete via7
+  complete metal8
+  complete via8
+  complete metal9
+  complete via9
+  complete metal10
+Warning: genGuides_gCell2TermMap avoid condition2, may result in guide open
+
+building cmap ... 
+
+init guide query ...
+  complete metal1 (guide)
+  complete via1 (guide)
+  complete metal2 (guide)
+  complete via2 (guide)
+  complete metal3 (guide)
+  complete via3 (guide)
+  complete metal4 (guide)
+  complete via4 (guide)
+  complete metal5 (guide)
+  complete via5 (guide)
+  complete metal6 (guide)
+  complete via6 (guide)
+  complete metal7 (guide)
+  complete via7 (guide)
+  complete metal8 (guide)
+  complete via8 (guide)
+  complete metal9 (guide)
+  complete via9 (guide)
+  complete metal10 (guide)
+
+metal1 guide region query size = 955
+via1 guide region query size = 0
+metal2 guide region query size = 1060
+via2 guide region query size = 0
+metal3 guide region query size = 735
+via3 guide region query size = 0
+metal4 guide region query size = 8
+via4 guide region query size = 0
+metal5 guide region query size = 0
+via5 guide region query size = 0
+metal6 guide region query size = 0
+via6 guide region query size = 0
+metal7 guide region query size = 0
+via7 guide region query size = 0
+metal8 guide region query size = 0
+via8 guide region query size = 0
+metal9 guide region query size = 0
+via9 guide region query size = 0
+metal10 guide region query size = 0
+
+init gr pin query ...
+
+
+start track assignment
+Done with 1690 horizontal wires in 1 frboxes and 1690 vertical wires in 1 frboxes.
+Done with 412 horizontal wires in 1 frboxes and 166 vertical wires in 1 frboxes.
+
+complete track assignment
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 11.73 (MB), peak = 11.93 (MB)
+
+start routing data preparation
+initVia2ViaMinLen_minSpc metal1 (d2d, d2u, u2d, u2u) = (0, 0, 0, 280)
+initVia2ViaMinLen_minSpc metal2 (d2d, d2u, u2d, u2u) = (270, 0, 0, 280)
+initVia2ViaMinLen_minSpc metal3 (d2d, d2u, u2d, u2u) = (280, 0, 0, 560)
+initVia2ViaMinLen_minSpc metal4 (d2d, d2u, u2d, u2u) = (280, 0, 0, 560)
+initVia2ViaMinLen_minSpc metal5 (d2d, d2u, u2d, u2u) = (560, 0, 0, 560)
+initVia2ViaMinLen_minSpc metal6 (d2d, d2u, u2d, u2u) = (560, 0, 0, 1600)
+initVia2ViaMinLen_minSpc metal7 (d2d, d2u, u2d, u2u) = (560, 0, 0, 1600)
+initVia2ViaMinLen_minSpc metal8 (d2d, d2u, u2d, u2u) = (1600, 0, 0, 3200)
+initVia2ViaMinLen_minSpc metal9 (d2d, d2u, u2d, u2u) = (1600, 0, 0, 3200)
+initVia2ViaMinLen_minSpc metal10 (d2d, d2u, u2d, u2u) = (3200, 0, 0, 0)
+initVia2ViaMinLen_minimumcut metal1 (d2d, d2u, u2d, u2u) = (0, 0, 0, 280)
+initVia2ViaMinLen_minimumcut metal1 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal2 (d2d, d2u, u2d, u2u) = (270, 0, 0, 280)
+initVia2ViaMinLen_minimumcut metal2 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal3 (d2d, d2u, u2d, u2u) = (280, 0, 0, 560)
+initVia2ViaMinLen_minimumcut metal3 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal4 (d2d, d2u, u2d, u2u) = (280, 0, 0, 560)
+initVia2ViaMinLen_minimumcut metal4 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal5 (d2d, d2u, u2d, u2u) = (560, 0, 0, 560)
+initVia2ViaMinLen_minimumcut metal5 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal6 (d2d, d2u, u2d, u2u) = (560, 0, 0, 1600)
+initVia2ViaMinLen_minimumcut metal6 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal7 (d2d, d2u, u2d, u2u) = (560, 0, 0, 1600)
+initVia2ViaMinLen_minimumcut metal7 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal8 (d2d, d2u, u2d, u2u) = (1600, 0, 0, 3200)
+initVia2ViaMinLen_minimumcut metal8 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal9 (d2d, d2u, u2d, u2u) = (1600, 0, 0, 3200)
+initVia2ViaMinLen_minimumcut metal9 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLen_minimumcut metal10 (d2d, d2u, u2d, u2u) = (3200, 0, 0, 0)
+initVia2ViaMinLen_minimumcut metal10 zerolen (b, b, b, b) = (1, 1, 1, 1)
+initVia2ViaMinLenNew_minSpc metal1 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (0, 0, 0, 0, 0, 0, 280, 420)
+initVia2ViaMinLenNew_minSpc metal2 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (410, 270, 280, 0, 280, 0, 420, 280)
+initVia2ViaMinLenNew_minSpc metal3 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (280, 420, 0, 280, 0, 280, 560, 560)
+initVia2ViaMinLenNew_minSpc metal4 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (420, 280, 0, 0, 0, 0, 560, 560)
+initVia2ViaMinLenNew_minSpc metal5 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (560, 560, 0, 0, 0, 0, 560, 560)
+initVia2ViaMinLenNew_minSpc metal6 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (560, 560, 0, 0, 0, 0, 1600, 1600)
+initVia2ViaMinLenNew_minSpc metal7 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (560, 560, 0, 0, 0, 0, 1600, 1600)
+initVia2ViaMinLenNew_minSpc metal8 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (1600, 1600, 0, 0, 0, 0, 3200, 3200)
+initVia2ViaMinLenNew_minSpc metal9 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (1600, 1600, 0, 0, 0, 0, 3200, 3200)
+initVia2ViaMinLenNew_minSpc metal10 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (3200, 3200, 0, 0, 0, 0, 0, 0)
+initVia2ViaMinLenNew_minimumcut metal1 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (0, 0, 0, 0, 0, 0, 280, 420)
+initVia2ViaMinLenNew_minimumcut metal2 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (410, 270, 280, 0, 280, 0, 420, 280)
+initVia2ViaMinLenNew_minimumcut metal3 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (280, 420, 0, 280, 0, 280, 560, 560)
+initVia2ViaMinLenNew_minimumcut metal4 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (420, 280, 0, 0, 0, 0, 560, 560)
+initVia2ViaMinLenNew_minimumcut metal5 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (560, 560, 0, 0, 0, 0, 560, 560)
+initVia2ViaMinLenNew_minimumcut metal6 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (560, 560, 0, 0, 0, 0, 1600, 1600)
+initVia2ViaMinLenNew_minimumcut metal7 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (560, 560, 0, 0, 0, 0, 1600, 1600)
+initVia2ViaMinLenNew_minimumcut metal8 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (1600, 1600, 0, 0, 0, 0, 3200, 3200)
+initVia2ViaMinLenNew_minimumcut metal9 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (1600, 1600, 0, 0, 0, 0, 3200, 3200)
+initVia2ViaMinLenNew_minimumcut metal10 (d2d-x, d2d-y, d2u-x, d2u-y, u2d-x, u2d-y, u2u-x, u2u-y) = (3200, 3200, 0, 0, 0, 0, 0, 0)
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 11.93 (MB), peak = 11.95 (MB)
+
+start detail routing ...
+start initial detail routing ...
+    completing 10% with 1 violations
+    elapsed time = 00:00:00, memory = 12.41 (MB)
+    completing 20% with 2 violations
+    elapsed time = 00:00:00, memory = 12.42 (MB)
+    completing 30% with 2 violations
+    elapsed time = 00:00:00, memory = 12.50 (MB)
+    completing 40% with 9 violations
+    elapsed time = 00:00:00, memory = 13.66 (MB)
+    completing 50% with 39 violations
+    elapsed time = 00:00:00, memory = 15.03 (MB)
+    completing 60% with 55 violations
+    elapsed time = 00:00:00, memory = 15.36 (MB)
+    completing 70% with 88 violations
+    elapsed time = 00:00:00, memory = 15.36 (MB)
+    completing 80% with 88 violations
+    elapsed time = 00:00:00, memory = 15.37 (MB)
+    completing 90% with 88 violations
+    elapsed time = 00:00:01, memory = 15.37 (MB)
+    completing 100% with 88 violations
+    elapsed time = 00:00:01, memory = 15.37 (MB)
+  number of violations = 88
+cpu time = 00:00:01, elapsed time = 00:00:01, memory = 15.37 (MB), peak = 16.53 (MB)
+total wire length = 7002 um
+total wire length on LAYER metal1 = 65 um
+total wire length on LAYER metal2 = 3221 um
+total wire length on LAYER metal3 = 3577 um
+total wire length on LAYER metal4 = 137 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2293
+up-via summary (total 2293):
+
+---------------
+ metal1    1048
+ metal2    1229
+ metal3      16
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2293
+
+
+start 1st optimization iteration ...
+    completing 10% with 88 violations
+    elapsed time = 00:00:00, memory = 15.37 (MB)
+    completing 20% with 88 violations
+    elapsed time = 00:00:00, memory = 15.38 (MB)
+    completing 30% with 88 violations
+    elapsed time = 00:00:00, memory = 15.39 (MB)
+    completing 40% with 91 violations
+    elapsed time = 00:00:00, memory = 15.39 (MB)
+    completing 50% with 82 violations
+    elapsed time = 00:00:00, memory = 14.96 (MB)
+    completing 60% with 22 violations
+    elapsed time = 00:00:00, memory = 15.49 (MB)
+    completing 70% with 17 violations
+    elapsed time = 00:00:00, memory = 15.62 (MB)
+    completing 80% with 17 violations
+    elapsed time = 00:00:00, memory = 15.62 (MB)
+    completing 90% with 17 violations
+    elapsed time = 00:00:01, memory = 15.62 (MB)
+    completing 100% with 17 violations
+    elapsed time = 00:00:01, memory = 15.62 (MB)
+  number of violations = 17
+cpu time = 00:00:01, elapsed time = 00:00:01, memory = 15.62 (MB), peak = 17.54 (MB)
+total wire length = 6854 um
+total wire length on LAYER metal1 = 91 um
+total wire length on LAYER metal2 = 3141 um
+total wire length on LAYER metal3 = 3488 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2211
+up-via summary (total 2211):
+
+---------------
+ metal1    1047
+ metal2    1153
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2211
+
+
+start 2nd optimization iteration ...
+    completing 10% with 16 violations
+    elapsed time = 00:00:00, memory = 16.16 (MB)
+    completing 20% with 15 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 30% with 15 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 40% with 6 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 50% with 4 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 60% with 4 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 70% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 80% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 90% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 100% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+  number of violations = 0
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 16.26 (MB), peak = 17.54 (MB)
+total wire length = 6854 um
+total wire length on LAYER metal1 = 92 um
+total wire length on LAYER metal2 = 3135 um
+total wire length on LAYER metal3 = 3492 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2223
+up-via summary (total 2223):
+
+---------------
+ metal1    1046
+ metal2    1166
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2223
+
+
+start 3rd optimization iteration ...
+    completing 10% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 20% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 30% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 40% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 50% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 60% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 70% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 80% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 90% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 100% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+  number of violations = 0
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 16.26 (MB), peak = 17.54 (MB)
+total wire length = 6854 um
+total wire length on LAYER metal1 = 92 um
+total wire length on LAYER metal2 = 3135 um
+total wire length on LAYER metal3 = 3492 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2223
+up-via summary (total 2223):
+
+---------------
+ metal1    1046
+ metal2    1166
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2223
+
+
+start 4th optimization iteration ...
+    completing 10% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 20% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 30% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 40% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 50% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 60% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 70% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 80% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 90% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 100% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+  number of violations = 0
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 16.26 (MB), peak = 17.54 (MB)
+total wire length = 6854 um
+total wire length on LAYER metal1 = 92 um
+total wire length on LAYER metal2 = 3135 um
+total wire length on LAYER metal3 = 3492 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2223
+up-via summary (total 2223):
+
+---------------
+ metal1    1046
+ metal2    1166
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2223
+
+
+start 5th optimization iteration ...
+    completing 10% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 20% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 30% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 40% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 50% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 60% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 70% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 80% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 90% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 100% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+  number of violations = 0
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 16.26 (MB), peak = 17.54 (MB)
+total wire length = 6854 um
+total wire length on LAYER metal1 = 92 um
+total wire length on LAYER metal2 = 3135 um
+total wire length on LAYER metal3 = 3492 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2223
+up-via summary (total 2223):
+
+---------------
+ metal1    1046
+ metal2    1166
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2223
+
+
+start 6th optimization iteration ...
+    completing 10% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 20% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 30% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 40% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 50% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 60% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 70% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 80% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 90% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 100% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+  number of violations = 0
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 16.26 (MB), peak = 17.54 (MB)
+total wire length = 6854 um
+total wire length on LAYER metal1 = 92 um
+total wire length on LAYER metal2 = 3135 um
+total wire length on LAYER metal3 = 3492 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2223
+up-via summary (total 2223):
+
+---------------
+ metal1    1046
+ metal2    1166
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2223
+
+
+start 7th optimization iteration ...
+    completing 10% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 20% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 30% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 40% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 50% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 60% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 70% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 80% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 90% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+    completing 100% with 0 violations
+    elapsed time = 00:00:00, memory = 16.26 (MB)
+  number of violations = 0
+cpu time = 00:00:00, elapsed time = 00:00:00, memory = 16.26 (MB), peak = 17.54 (MB)./reports/nangate45/gcd/5_route_drc.rpt
+
+complete detail routing
+total wire length = 6854 um
+total wire length on LAYER metal1 = 92 um
+total wire length on LAYER metal2 = 3135 um
+total wire length on LAYER metal3 = 3492 um
+total wire length on LAYER metal4 = 133 um
+total wire length on LAYER metal5 = 0 um
+total wire length on LAYER metal6 = 0 um
+total wire length on LAYER metal7 = 0 um
+total wire length on LAYER metal8 = 0 um
+total wire length on LAYER metal9 = 0 um
+total wire length on LAYER metal10 = 0 um
+total number of vias = 2223
+up-via summary (total 2223):
+
+---------------
+ metal1    1046
+ metal2    1166
+ metal3      11
+ metal4       0
+ metal5       0
+ metal6       0
+ metal7       0
+ metal8       0
+ metal9       0
+---------------
+           2223
+
+cpu time = 00:00:02, elapsed time = 00:00:02, memory = 16.26 (MB), peak = 17.54 (MB)
+
+post processing ...
+WARNING (DEFPARS-7011): The NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The DEF parser will ignore this statement. See file ./results/nangate45/gcd/4_cts.def at line 2.
+
+
+post processing ...
+WARNING (DEFPARS-7011): The NAMESCASESENSITIVE statement is obsolete in version 5.6 and later.
+The DEF parser will ignore this statement. See file ./results/nangate45/gcd/4_cts.def at line 2.
+
+
+Runtime taken (hrt): 4.00472
+0:04.01elapsed 99%CPU 17964memKB

@@ -1,0 +1,34 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/2_1_floorplan.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 272 components and 1508 component-terminals.
+Notice 0:     Created 343 nets and 964 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/2_1_floorplan.def
+#Macro blocks found: 0
+WARNING: force pin spread option has no effect when using random pin placement
+ > Running IO placement
+ * Num of slots          2494
+ * Num of I/O            54
+ * Num of I/O w/sink     54
+ * Num of I/O w/o sink   0
+ * Slots Per Section     200
+ * Slots Increase Factor 0.01
+ * Usage Per Section     0.8
+ * Usage Increase Factor 0.01
+ * Force Pin Spread      1
+
+WARNING: running random pin placement
+RandomMode Even
+ > IO placement done.
+0:00.81elapsed 99%CPU 50608memKB

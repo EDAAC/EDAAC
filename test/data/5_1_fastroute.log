@@ -1,0 +1,251 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/4_cts.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 1974 components and 5032 component-terminals.
+Notice 0:     Created 2 special nets and 3948 connections.
+Notice 0:     Created 403 nets and 1084 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/4_cts.def
+
+ *****************
+ *   FastRoute   *
+ *****************
+
+[PARAMS] Min routing layer: 2
+[PARAMS] Max routing layer: 10
+[PARAMS] Global adjustment: 0
+[PARAMS] Unidirectional routing: 1
+[PARAMS] Clock net routing: 0
+[PARAMS] Grid origin: (-1, -1)
+
+Initializing grid...
+[INFO] #DB Obstructions: 0
+[INFO] #DB Obstacles: 1885
+[INFO] #DB Macros: 0
+Initializing grid... Done!
+Initializing routing layers...
+Initializing routing layers... Done!
+Initializing routing tracks...
+Initializing routing tracks... Done!
+Setting capacities...
+Setting capacities... Done!
+Setting spacings and widths...
+Setting spacings and widths... Done!
+Initializing nets...
+Checking pin placement...
+Checking pin placement... Done!
+[INFO] Minimum degree: 2
+[INFO] Maximum degree: 11
+Initializing nets... Done!
+Adjusting grid...
+Adjusting grid... Done!
+Computing track adjustments...
+Computing track adjustments... Done!
+Computing obstacles adjustments...
+[INFO] Processing 8743 obstacles in layer 1
+[INFO] Processing 3 obstacles in layer 4
+[INFO] Processing 4 obstacles in layer 7
+Computing obstacles adjustments... Done!
+Computing user defined adjustments...
+Computing user defined adjustments... Done!
+Computing user defined layers adjustments...
+[INFO] Reducing resources of layer 2 by 50%
+[INFO] Reducing resources of layer 3 by 50%
+[INFO] Reducing resources of layer 4 by 50%
+[INFO] Reducing resources of layer 5 by 50%
+[INFO] Reducing resources of layer 6 by 50%
+[INFO] Reducing resources of layer 7 by 50%
+[INFO] Reducing resources of layer 8 by 50%
+[INFO] Reducing resources of layer 9 by 50%
+[INFO] Reducing resources of layer 10 by 50%
+Computing user defined layers adjustments... Done!
+[INFO] Elapsed time: 0.012143
+Running FastRoute...
+
+[INFO] WIRELEN : 3201, WIRELEN1 : 0
+[INFO] NumSeg  : 779
+[INFO] NumShift: 0
+[INFO] totalnon 0
+[INFO] Max 0.000000, Min 10000000.000000
+[INFO] cnt1 0, cnt2 0, cnt3 0
+
+First L Route
+[INFO] WIRELEN : 3191, WIRELEN1 : 3191
+[INFO] NumSeg  : 778
+[INFO] NumShift: 24
+[INFO] totalnon 0
+[INFO] Max 0.000000, Min 10000000.000000
+[INFO] cnt1 0, cnt2 0, cnt3 0
+
+[Overflow Report] Total hCap    : 25512
+[Overflow Report] Total vCap    : 27213
+[Overflow Report] Total Usage   : 3191
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+Second L Route
+[Overflow Report] Total hCap    : 25512
+[Overflow Report] Total vCap    : 27213
+[Overflow Report] Total Usage   : 3191
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+First Z Route
+[Overflow Report] Total hCap    : 25512
+[Overflow Report] Total vCap    : 27213
+[Overflow Report] Total Usage   : 3191
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+[INFO] LV routing round 0, enlarge 10 
+[INFO] 10 threshold, 10 expand
+[Overflow Report] total Usage   : 3191
+[Overflow Report] Max H Overflow: 1
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 1
+[Overflow Report] Num Overflow e: 1
+[Overflow Report] H   Overflow  : 1
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 1
+
+[INFO] LV routing round 1, enlarge 15 
+[INFO] 5 threshold, 15 expand
+[Overflow Report] total Usage   : 3191
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+[INFO] LV routing round 2, enlarge 20 
+[INFO] 1 threshold, 20 expand
+[Overflow Report] total Usage   : 3191
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+Usage checked
+Maze routing finished
+[INFO] P3 runtime: 0.000000 sec
+[INFO] Final 2D results: 
+[Overflow Report] total Usage   : 3191
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] Num Overflow e: 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+Layer Assignment Begins
+Layer assignment finished
+[INFO] 2D + Layer Assignment Runtime: 0.000000 sec
+Post Processing Begins 
+Post Processsing finished
+ Starting via filling
+[INFO] Via related to pin nodes 1553
+[INFO] Via related stiner nodes 106
+Via filling finished
+
+Final usage/overflow report: 
+[INFO] Usage per layer: 
+    Layer 1 usage: 0
+    Layer 2 usage: 1491
+    Layer 3 usage: 1653
+    Layer 4 usage: 60
+    Layer 5 usage: 0
+    Layer 6 usage: 0
+    Layer 7 usage: 0
+    Layer 8 usage: 0
+    Layer 9 usage: 0
+    Layer 10 usage: 0
+
+[INFO] Capacity per layer: 
+    Layer 1 capacity: 0
+    Layer 2 capacity: 11656
+    Layer 3 capacity: 15778
+    Layer 4 capacity: 7050
+    Layer 5 capacity: 6762
+    Layer 6 capacity: 7050
+    Layer 7 capacity: 2052
+    Layer 8 capacity: 2350
+    Layer 9 capacity: 0
+    Layer 10 capacity: 47
+
+[INFO] Use percentage per layer: 
+    Layer 1 use percentage: 0.0%
+    Layer 2 use percentage: 12.79%
+    Layer 3 use percentage: 10.48%
+    Layer 4 use percentage: 0.85%
+    Layer 5 use percentage: 0.00%
+    Layer 6 use percentage: 0.00%
+    Layer 7 use percentage: 0.00%
+    Layer 8 use percentage: 0.00%
+    Layer 9 use percentage: 0.0%
+    Layer 10 use percentage: 0.00%
+
+[INFO] Overflow per layer: 
+    Layer 1 overflow: 0
+    Layer 2 overflow: 0
+    Layer 3 overflow: 0
+    Layer 4 overflow: 0
+    Layer 5 overflow: 0
+    Layer 6 overflow: 0
+    Layer 7 overflow: 0
+    Layer 8 overflow: 0
+    Layer 9 overflow: 0
+    Layer 10 overflow: 0
+
+[Overflow Report] Total Usage   : 3204
+[Overflow Report] Total Capacity: 52745
+[Overflow Report] Max H Overflow: 0
+[Overflow Report] Max V Overflow: 0
+[Overflow Report] Max Overflow  : 0
+[Overflow Report] H   Overflow  : 0
+[Overflow Report] V   Overflow  : 0
+[Overflow Report] Final Overflow: 0
+
+[INFO] Final usage          : 3204
+[INFO] Final number of vias : 1903
+[INFO] Final usage 3D       : 8913
+Getting results...
+Getting results... Done!
+
+Running FastRoute... Done!
+[INFO] Total wirelength: 13456.799805 um
+[INFO] Elapsed time: 0.033012
+Writing guides...
+[INFO] Num routed nets: 369
+Writing guides... Done!
+0:05.49elapsed 100%CPU 99096memKB

@@ -1,0 +1,199 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/3_1_place_gp.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 386 components and 1736 component-terminals.
+Notice 0:     Created 2 special nets and 772 connections.
+Notice 0:     Created 343 nets and 964 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/3_1_place_gp.def
+
+==========================================================================
+report_checks
+--------------------------------------------------------------------------
+Startpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _503_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _512_/CK (DFF_X1)
+   0.08    0.08 ^ _512_/Q (DFF_X1)
+   0.04    0.12 ^ _305_/Z (BUF_X1)
+   0.06    0.19 ^ _308_/Z (XOR2_X1)
+   0.02    0.21 v _311_/ZN (AOI21_X1)
+   0.04    0.25 ^ _312_/ZN (OAI21_X1)
+   0.02    0.27 v _315_/ZN (AOI21_X1)
+   0.04    0.31 ^ _316_/ZN (OAI21_X1)
+   0.02    0.34 v _319_/ZN (AOI21_X1)
+   0.04    0.38 ^ _320_/ZN (OAI21_X1)
+   0.03    0.40 v _322_/ZN (OAI21_X1)
+   0.04    0.44 ^ _324_/ZN (OAI21_X1)
+   0.03    0.47 v _325_/ZN (OAI21_X1)
+   0.05    0.52 ^ _327_/ZN (OAI21_X1)
+   0.04    0.56 v _328_/ZN (OAI221_X1)
+   0.05    0.60 v _329_/ZN (AND3_X1)
+   0.05    0.66 ^ _330_/ZN (OAI22_X1)
+   0.02    0.68 v _331_/ZN (AOI21_X1)
+   0.05    0.73 ^ _332_/ZN (OAI21_X1)
+   0.09    0.81 ^ _338_/ZN (AND4_X1)
+   0.07    0.88 ^ _354_/Z (BUF_X1)
+   0.02    0.90 v _383_/ZN (AOI22_X1)
+   0.03    0.93 ^ _386_/ZN (OAI22_X1)
+   0.00    0.93 ^ _503_/D (DFF_X1)
+           0.93   data arrival time
+
+  10.00   10.00   clock core_clock (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+          10.00 ^ _503_/CK (DFF_X1)
+  -0.04    9.96   library setup time
+           9.96   data required time
+---------------------------------------------------------
+           9.96   data required time
+          -0.93   data arrival time
+---------------------------------------------------------
+           9.03   slack (MET)
+
+
+
+==========================================================================
+report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+report_design_area
+--------------------------------------------------------------------------
+Design area 438 u^2 7% utilization.
+
+==========================================================================
+instance_count
+--------------------------------------------------------------------------
+386
+
+==========================================================================
+pin_count
+--------------------------------------------------------------------------
+964
+
+Perform resizing before buffer insertion...
+Warning: resize.tcl, 61 resize -dont_use is deprecated. Use the set_dont_use commands instead.
+Resized 22 instances.
+Perform port buffering...
+Inserted 35 input buffers.
+Inserted 18 output buffers.
+Repair max cap...
+Repair max slew...
+Repair max fanout...
+Perform resizing after buffer insertion...
+Warning: resize.tcl, 83 resize -dont_use is deprecated. Use the set_dont_use commands instead.
+Resized 35 instances.
+Repair tie lo fanout...
+Repair tie hi fanout...
+Repair hold violations...
+Inserted 0 hold buffers.
+
+==========================================================================
+report_floating_nets
+--------------------------------------------------------------------------
+
+==========================================================================
+report_checks
+--------------------------------------------------------------------------
+Startpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _514_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _512_/CK (DFF_X1)
+   0.08    0.08 ^ _512_/Q (DFF_X1)
+   0.04    0.12 ^ _305_/Z (CLKBUF_X2)
+   0.05    0.17 ^ _308_/Z (XOR2_X2)
+   0.02    0.19 v _311_/ZN (AOI21_X1)
+   0.04    0.23 ^ _312_/ZN (OAI21_X1)
+   0.02    0.26 v _315_/ZN (AOI21_X1)
+   0.04    0.30 ^ _316_/ZN (OAI21_X1)
+   0.02    0.32 v _319_/ZN (AOI21_X1)
+   0.04    0.36 ^ _320_/ZN (OAI21_X1)
+   0.03    0.39 v _322_/ZN (OAI21_X1)
+   0.04    0.43 ^ _324_/ZN (OAI21_X1)
+   0.03    0.46 v _325_/ZN (OAI21_X1)
+   0.05    0.50 ^ _327_/ZN (OAI21_X1)
+   0.04    0.54 v _328_/ZN (OAI221_X1)
+   0.05    0.59 v _329_/ZN (AND3_X1)
+   0.05    0.64 ^ _330_/ZN (OAI22_X1)
+   0.03    0.67 v _331_/ZN (AOI21_X1)
+   0.05    0.72 ^ _332_/ZN (OAI21_X2)
+   0.03    0.75 v _427_/ZN (NAND3_X1)
+   0.06    0.81 v _430_/ZN (OR2_X1)
+   0.04    0.85 v _431_/Z (BUF_X2)
+   0.04    0.89 ^ _441_/ZN (OAI221_X1)
+   0.00    0.89 ^ _514_/D (DFF_X1)
+           0.89   data arrival time
+
+  10.00   10.00   clock core_clock (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+          10.00 ^ _514_/CK (DFF_X1)
+  -0.04    9.96   library setup time
+           9.96   data required time
+---------------------------------------------------------
+           9.96   data required time
+          -0.89   data arrival time
+---------------------------------------------------------
+           9.07   slack (MET)
+
+
+
+==========================================================================
+report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+report_slew_violations
+--------------------------------------------------------------------------
+
+==========================================================================
+report_design_area
+--------------------------------------------------------------------------
+Design area 491 u^2 8% utilization.
+
+==========================================================================
+instance_count
+--------------------------------------------------------------------------
+439
+
+==========================================================================
+pin_count
+--------------------------------------------------------------------------
+1070
+
+0:05.77elapsed 100%CPU 76596memKB

@@ -1,0 +1,20 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/4_1_cts.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 446 components and 1976 component-terminals.
+Notice 0:     Created 2 special nets and 892 connections.
+Notice 0:     Created 403 nets and 1084 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/4_1_cts.def
+Placed 1528 filler instances.
+0:00.62elapsed 99%CPU 53324memKB

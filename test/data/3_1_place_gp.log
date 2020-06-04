@@ -1,0 +1,90 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/2_floorplan.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 386 components and 1736 component-terminals.
+Notice 0:     Created 2 special nets and 772 connections.
+Notice 0:     Created 343 nets and 964 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/2_floorplan.def
+[INFO] DBU = 2000
+[INFO] SiteSize = (380, 2800)
+[INFO] CoreAreaLxLy = (20140, 22400)
+[INFO] CoreAreaUxUy = (180500, 182000)
+[INFO] NumInstances = 386
+[INFO] NumPlaceInstances = 272
+[INFO] NumFixedInstances = 114
+[INFO] NumDummyInstances = 0
+[INFO] NumNets = 343
+[INFO] NumPins = 1018
+[INFO] DieAreaLxLy = (0, 0)
+[INFO] DieAreaUxUy = (200260, 201600)
+[INFO] CoreAreaLxLy = (20140, 22400)
+[INFO] CoreAreaUxUy = (180500, 182000)
+[INFO] CoreArea = 25593456000
+[INFO] NonPlaceInstsArea = 121296000
+[INFO] PlaceInstsArea = 2787680000
+[INFO] Util(%) = 10.944027
+[INFO] StdInstsArea = 2787680000
+[INFO] MacroInstsArea = 0
+[InitialPlace]  Iter: 1 CG Error: 1.17779e-07 HPWL: 12775740
+[InitialPlace]  Iter: 2 CG Error: 9.6544e-08 HPWL: 10257608
+[InitialPlace]  Iter: 3 CG Error: 8.4442e-08 HPWL: 10255821
+[InitialPlace]  Iter: 4 CG Error: 1.14336e-07 HPWL: 10274660
+[InitialPlace]  Iter: 5 CG Error: 7.5165e-08 HPWL: 10262097
+[INFO] FillerInit: NumGCells = 769
+[INFO] FillerInit: NumGNets = 343
+[INFO] FillerInit: NumGPins = 1018
+[INFO] TargetDensity = 0.300000
+[INFO] AveragePlaceInstArea = 10248823
+[INFO] IdealBinArea = 34162740
+[INFO] IdealBinCnt = 749
+[INFO] TotalBinArea = 25593456000
+[INFO] BinCnt = (16, 16)
+[INFO] BinSize = (10023, 9975)
+[INFO] NumBins = 256
+[NesterovSolve] Iter: 1 overflow: 0.766949 HPWL: 10495498
+[NesterovSolve] Iter: 10 overflow: 0.526776 HPWL: 11750447
+[NesterovSolve] Iter: 20 overflow: 0.532507 HPWL: 11793036
+[NesterovSolve] Iter: 30 overflow: 0.532952 HPWL: 11793608
+[NesterovSolve] Iter: 40 overflow: 0.532591 HPWL: 11788274
+[NesterovSolve] Iter: 50 overflow: 0.532885 HPWL: 11790225
+[NesterovSolve] Iter: 60 overflow: 0.532905 HPWL: 11791096
+[NesterovSolve] Iter: 70 overflow: 0.532817 HPWL: 11790549
+[NesterovSolve] Iter: 80 overflow: 0.532713 HPWL: 11790161
+[NesterovSolve] Iter: 90 overflow: 0.532592 HPWL: 11789994
+[NesterovSolve] Iter: 100 overflow: 0.53249 HPWL: 11790418
+[NesterovSolve] Iter: 110 overflow: 0.532289 HPWL: 11790790
+[NesterovSolve] Iter: 120 overflow: 0.531934 HPWL: 11790895
+[NesterovSolve] Iter: 130 overflow: 0.531427 HPWL: 11790836
+[NesterovSolve] Iter: 140 overflow: 0.530616 HPWL: 11790484
+[NesterovSolve] Iter: 150 overflow: 0.529263 HPWL: 11788900
+[NesterovSolve] Iter: 160 overflow: 0.526899 HPWL: 11783538
+[NesterovSolve] Iter: 170 overflow: 0.523164 HPWL: 11775113
+[NesterovSolve] Iter: 180 overflow: 0.517757 HPWL: 11764819
+[NesterovSolve] Iter: 190 overflow: 0.509595 HPWL: 11747904
+[NesterovSolve] Iter: 200 overflow: 0.497487 HPWL: 11716052
+[NesterovSolve] Iter: 210 overflow: 0.479738 HPWL: 11657560
+[NesterovSolve] Iter: 220 overflow: 0.455545 HPWL: 11570707
+[NesterovSolve] Iter: 230 overflow: 0.426238 HPWL: 11442909
+[NesterovSolve] Iter: 240 overflow: 0.392745 HPWL: 11355077
+[NesterovSolve] Iter: 250 overflow: 0.354617 HPWL: 11331736
+[NesterovSolve] Iter: 260 overflow: 0.317764 HPWL: 11336025
+[NesterovSolve] Iter: 270 overflow: 0.275875 HPWL: 11338335
+[NesterovSolve] Iter: 280 overflow: 0.246674 HPWL: 11389278
+[NesterovSolve] Iter: 290 overflow: 0.210972 HPWL: 11402370
+[NesterovSolve] Iter: 300 overflow: 0.182544 HPWL: 11427319
+[NesterovSolve] Iter: 310 overflow: 0.159676 HPWL: 11465012
+[NesterovSolve] Iter: 320 overflow: 0.130055 HPWL: 11492280
+[NesterovSolve] Iter: 330 overflow: 0.103493 HPWL: 11502244
+[NesterovSolve] Finished with Overflow: 0.0986279
+0:05.47elapsed 99%CPU 76368memKB

@@ -1,0 +1,80 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+number instances in verilog is 272
+Info: Added 57 rows of 422 sites.
+
+==========================================================================
+report_checks
+--------------------------------------------------------------------------
+Startpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _503_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _512_/CK (DFF_X1)
+   0.08    0.08 ^ _512_/Q (DFF_X1)
+   0.04    0.13 ^ _305_/Z (BUF_X1)
+   0.07    0.20 ^ _308_/Z (XOR2_X1)
+   0.02    0.22 v _311_/ZN (AOI21_X1)
+   0.05    0.27 ^ _312_/ZN (OAI21_X1)
+   0.03    0.30 v _315_/ZN (AOI21_X1)
+   0.05    0.34 ^ _316_/ZN (OAI21_X1)
+   0.03    0.37 v _319_/ZN (AOI21_X1)
+   0.04    0.42 ^ _320_/ZN (OAI21_X1)
+   0.03    0.44 v _322_/ZN (OAI21_X1)
+   0.05    0.49 ^ _324_/ZN (OAI21_X1)
+   0.03    0.52 v _325_/ZN (OAI21_X1)
+   0.06    0.57 ^ _327_/ZN (OAI21_X1)
+   0.04    0.62 v _328_/ZN (OAI221_X1)
+   0.05    0.67 v _329_/ZN (AND3_X1)
+   0.06    0.72 ^ _330_/ZN (OAI22_X1)
+   0.03    0.75 v _331_/ZN (AOI21_X1)
+   0.05    0.80 ^ _332_/ZN (OAI21_X1)
+   0.10    0.90 ^ _338_/ZN (AND4_X1)
+   0.08    0.98 ^ _354_/Z (BUF_X1)
+   0.02    1.00 v _383_/ZN (AOI22_X1)
+   0.04    1.03 ^ _386_/ZN (OAI22_X1)
+   0.00    1.03 ^ _503_/D (DFF_X1)
+           1.03   data arrival time
+
+  10.00   10.00   clock core_clock (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+          10.00 ^ _503_/CK (DFF_X1)
+  -0.04    9.96   library setup time
+           9.96   data required time
+---------------------------------------------------------
+           9.96   data required time
+          -1.03   data arrival time
+---------------------------------------------------------
+           8.93   slack (MET)
+
+
+
+==========================================================================
+report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+report_design_area
+--------------------------------------------------------------------------
+Design area 408 u^2 6% utilization.
+0:00.78elapsed 100%CPU 51688memKB

@@ -1,0 +1,42 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/3_2_place_resized.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 439 components and 1948 component-terminals.
+Notice 0:     Created 2 special nets and 878 connections.
+Notice 0:     Created 396 nets and 1070 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/3_2_place_resized.def
+Design Stats
+--------------------------------
+total instances           439
+multi row instances         0
+fixed instances           114
+nets                      398
+design area            6398.4 u^2
+fixed area               30.3 u^2
+movable area            460.4 u^2
+utilization                 7 %
+utilization padded         10 %
+rows                       57
+row height                1.4 u
+
+Placement Analysis
+--------------------------------
+total displacement      359.5 u
+average displacement      0.8 u
+max displacement          4.6 u
+original HPWL          5834.1 u
+legalized HPWL         5969.4 u
+delta HPWL                  2 %
+
+0:00.80elapsed 100%CPU 51672memKB

@@ -1,0 +1,200 @@
+OpenROAD 1.1.0 GITDIR-NOT
+This program is licensed under the BSD-3 license. See the LICENSE file for details. 
+Components of the program may be licensed under more restrictive licenses which must be honored.
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0:     Created 22 technology layers
+Notice 0:     Created 27 technology vias
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.tech.lef
+Notice 0: Reading LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0:     Created 134 library cells
+Notice 0: Finished LEF file:  ./platforms/nangate45/lef/NangateOpenCellLibrary.macro.mod.lef
+Notice 0: 
+Reading DEF file: ./results/nangate45/gcd/5_route.def
+Notice 0: Design: gcd
+Notice 0:     Created 54 pins.
+Notice 0:     Created 1974 components and 5032 component-terminals.
+Notice 0:     Created 2 special nets and 3948 connections.
+Notice 0:     Created 403 nets and 1084 connections.
+Notice 0: Finished DEF file: ./results/nangate45/gcd/5_route.def
+
+==========================================================================
+report_checks -path_delay min
+--------------------------------------------------------------------------
+Startpoint: _493_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _493_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: min
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _493_/CK (DFF_X1)
+   0.08    0.08 v _493_/Q (DFF_X1)
+   0.01    0.10 ^ _479_/ZN (NAND2_X1)
+   0.01    0.11 v _487_/ZN (OAI21_X1)
+   0.00    0.11 v _493_/D (DFF_X1)
+           0.11   data arrival time
+
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00   clock reconvergence pessimism
+           0.00 ^ _493_/CK (DFF_X1)
+   0.00    0.00   library hold time
+           0.00   data required time
+---------------------------------------------------------
+           0.00   data required time
+          -0.11   data arrival time
+---------------------------------------------------------
+           0.11   slack (MET)
+
+
+
+==========================================================================
+report_checks -path_delay max
+--------------------------------------------------------------------------
+Startpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _512_/CK (DFF_X1)
+   0.09    0.09 ^ _512_/Q (DFF_X1)
+   0.04    0.12 ^ _305_/Z (CLKBUF_X2)
+   0.05    0.18 ^ _308_/Z (XOR2_X2)
+   0.02    0.20 v _311_/ZN (AOI21_X1)
+   0.05    0.25 ^ _312_/ZN (OAI21_X1)
+   0.03    0.27 v _315_/ZN (AOI21_X1)
+   0.05    0.32 ^ _316_/ZN (OAI21_X1)
+   0.03    0.35 v _319_/ZN (AOI21_X1)
+   0.04    0.39 ^ _320_/ZN (OAI21_X1)
+   0.03    0.42 v _322_/ZN (OAI21_X1)
+   0.05    0.47 ^ _324_/ZN (OAI21_X1)
+   0.03    0.50 v _325_/ZN (OAI21_X1)
+   0.06    0.55 ^ _327_/ZN (OAI21_X1)
+   0.04    0.60 v _328_/ZN (OAI221_X1)
+   0.05    0.64 v _329_/ZN (AND3_X1)
+   0.06    0.70 ^ _330_/ZN (OAI22_X1)
+   0.03    0.73 v _331_/ZN (AOI21_X1)
+   0.05    0.79 ^ _332_/ZN (OAI21_X2)
+   0.03    0.82 v _427_/ZN (NAND3_X1)
+   0.07    0.89 v _430_/ZN (OR2_X1)
+   0.04    0.93 v _431_/Z (BUF_X2)
+   0.05    0.97 ^ _436_/ZN (OAI221_X1)
+   0.00    0.97 ^ _512_/D (DFF_X1)
+           0.97   data arrival time
+
+  10.00   10.00   clock core_clock (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+          10.00 ^ _512_/CK (DFF_X1)
+  -0.04    9.96   library setup time
+           9.96   data required time
+---------------------------------------------------------
+           9.96   data required time
+          -0.97   data arrival time
+---------------------------------------------------------
+           8.99   slack (MET)
+
+
+
+==========================================================================
+report_checks -unconstrained
+--------------------------------------------------------------------------
+Startpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _512_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+  Delay    Time   Description
+---------------------------------------------------------
+   0.00    0.00   clock core_clock (rise edge)
+   0.00    0.00   clock network delay (ideal)
+   0.00    0.00 ^ _512_/CK (DFF_X1)
+   0.09    0.09 ^ _512_/Q (DFF_X1)
+   0.04    0.12 ^ _305_/Z (CLKBUF_X2)
+   0.05    0.18 ^ _308_/Z (XOR2_X2)
+   0.02    0.20 v _311_/ZN (AOI21_X1)
+   0.05    0.25 ^ _312_/ZN (OAI21_X1)
+   0.03    0.27 v _315_/ZN (AOI21_X1)
+   0.05    0.32 ^ _316_/ZN (OAI21_X1)
+   0.03    0.35 v _319_/ZN (AOI21_X1)
+   0.04    0.39 ^ _320_/ZN (OAI21_X1)
+   0.03    0.42 v _322_/ZN (OAI21_X1)
+   0.05    0.47 ^ _324_/ZN (OAI21_X1)
+   0.03    0.50 v _325_/ZN (OAI21_X1)
+   0.06    0.55 ^ _327_/ZN (OAI21_X1)
+   0.04    0.60 v _328_/ZN (OAI221_X1)
+   0.05    0.64 v _329_/ZN (AND3_X1)
+   0.06    0.70 ^ _330_/ZN (OAI22_X1)
+   0.03    0.73 v _331_/ZN (AOI21_X1)
+   0.05    0.79 ^ _332_/ZN (OAI21_X2)
+   0.03    0.82 v _427_/ZN (NAND3_X1)
+   0.07    0.89 v _430_/ZN (OR2_X1)
+   0.04    0.93 v _431_/Z (BUF_X2)
+   0.05    0.97 ^ _436_/ZN (OAI221_X1)
+   0.00    0.97 ^ _512_/D (DFF_X1)
+           0.97   data arrival time
+
+  10.00   10.00   clock core_clock (rise edge)
+   0.00   10.00   clock network delay (ideal)
+   0.00   10.00   clock reconvergence pessimism
+          10.00 ^ _512_/CK (DFF_X1)
+  -0.04    9.96   library setup time
+           9.96   data required time
+---------------------------------------------------------
+           9.96   data required time
+          -0.97   data arrival time
+---------------------------------------------------------
+           8.99   slack (MET)
+
+
+
+==========================================================================
+report_tns
+--------------------------------------------------------------------------
+tns 0.00
+
+==========================================================================
+report_wns
+--------------------------------------------------------------------------
+wns 0.00
+
+==========================================================================
+report_check_types -max_slew -violators
+--------------------------------------------------------------------------
+
+==========================================================================
+report_power
+--------------------------------------------------------------------------
+Group                  Internal  Switching    Leakage      Total
+                          Power      Power      Power      Power
+----------------------------------------------------------------
+Sequential             0.00e+00   0.00e+00   2.77e-06   2.77e-06  13.1%
+Combinational          4.08e-06   7.00e-06   7.31e-06   1.84e-05  86.9%
+Macro                  0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+Pad                    0.00e+00   0.00e+00   0.00e+00   0.00e+00   0.0%
+----------------------------------------------------------------
+Total                  4.08e-06   7.00e-06   1.01e-05   2.12e-05 100.0%
+                          19.3%      33.1%      47.6%
+
+==========================================================================
+report_design_area
+--------------------------------------------------------------------------
+Design area 6398 u^2 100% utilization.
+
+==========================================================================
+instance_count
+--------------------------------------------------------------------------
+1974
+
+==========================================================================
+pin_count
+--------------------------------------------------------------------------
+1084
+[INFO] Deleted 0 routing obstructions
+0:00.84elapsed 100%CPU 54768memKB

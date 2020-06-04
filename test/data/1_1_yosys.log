@@ -1,0 +1,1401 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+1706 (git sha1 UNKNOWN, gcc 7.3.1 -fPIC -Os)
+
+[TCL: yosys -import] Command name collision: found pre-existing command `cd' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `eval' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `read' -> skip.
+[TCL: yosys -import] Command name collision: found pre-existing command `trace' -> skip.
+
+1. Executing Verilog-2005 frontend: ./designs/src/gcd/gcd.v
+Parsing SystemVerilog input from `./designs/src/gcd/gcd.v' to AST representation.
+Storing AST representation for module `$abstract\gcd'.
+Storing AST representation for module `$abstract\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e'.
+Storing AST representation for module `$abstract\RegRst_0x9f365fdf6c8998a'.
+Storing AST representation for module `$abstract\GcdUnitDpathRTL_0x4d0fc71ead8d3d9e'.
+Storing AST representation for module `$abstract\RegEn_0x68db79c4ec1d6e5b'.
+Storing AST representation for module `$abstract\LtComparator_0x422b1f52edd46a85'.
+Storing AST representation for module `$abstract\ZeroComparator_0x422b1f52edd46a85'.
+Storing AST representation for module `$abstract\Mux_0x683fa1a418b072c9'.
+Storing AST representation for module `$abstract\Mux_0xdd6473406d1a99a'.
+Storing AST representation for module `$abstract\Subtractor_0x422b1f52edd46a85'.
+Successfully finished Verilog frontend.
+
+2. Executing Verilog-2005 frontend: ./platforms/nangate45/NangateOpenCellLibrary.blackbox.v
+Parsing Verilog input from `./platforms/nangate45/NangateOpenCellLibrary.blackbox.v' to AST representation.
+Storing AST representation for module `$abstract\AND2_X1'.
+Storing AST representation for module `$abstract\AND2_X2'.
+Storing AST representation for module `$abstract\AND2_X4'.
+Storing AST representation for module `$abstract\AND3_X1'.
+Storing AST representation for module `$abstract\AND3_X2'.
+Storing AST representation for module `$abstract\AND3_X4'.
+Storing AST representation for module `$abstract\AND4_X1'.
+Storing AST representation for module `$abstract\AND4_X2'.
+Storing AST representation for module `$abstract\AND4_X4'.
+Storing AST representation for module `$abstract\ANTENNA_X1'.
+Storing AST representation for module `$abstract\AOI211_X1'.
+Storing AST representation for module `$abstract\AOI211_X2'.
+Storing AST representation for module `$abstract\AOI211_X4'.
+Storing AST representation for module `$abstract\AOI21_X1'.
+Storing AST representation for module `$abstract\AOI21_X2'.
+Storing AST representation for module `$abstract\AOI21_X4'.
+Storing AST representation for module `$abstract\AOI221_X1'.
+Storing AST representation for module `$abstract\AOI221_X2'.
+Storing AST representation for module `$abstract\AOI221_X4'.
+Storing AST representation for module `$abstract\AOI222_X1'.
+Storing AST representation for module `$abstract\AOI222_X2'.
+Storing AST representation for module `$abstract\AOI222_X4'.
+Storing AST representation for module `$abstract\AOI22_X1'.
+Storing AST representation for module `$abstract\AOI22_X2'.
+Storing AST representation for module `$abstract\AOI22_X4'.
+Storing AST representation for module `$abstract\BUF_X1'.
+Storing AST representation for module `$abstract\BUF_X16'.
+Storing AST representation for module `$abstract\BUF_X2'.
+Storing AST representation for module `$abstract\BUF_X32'.
+Storing AST representation for module `$abstract\BUF_X4'.
+Storing AST representation for module `$abstract\BUF_X8'.
+Storing AST representation for module `$abstract\CLKBUF_X1'.
+Storing AST representation for module `$abstract\CLKBUF_X2'.
+Storing AST representation for module `$abstract\CLKBUF_X3'.
+Storing AST representation for module `$abstract\CLKGATETST_X1'.
+Storing AST representation for module `$abstract\CLKGATETST_X2'.
+Storing AST representation for module `$abstract\CLKGATETST_X4'.
+Storing AST representation for module `$abstract\CLKGATETST_X8'.
+Storing AST representation for module `$abstract\CLKGATE_X1'.
+Storing AST representation for module `$abstract\CLKGATE_X2'.
+Storing AST representation for module `$abstract\CLKGATE_X4'.
+Storing AST representation for module `$abstract\CLKGATE_X8'.
+Storing AST representation for module `$abstract\DFFRS_X1'.
+Storing AST representation for module `$abstract\DFFRS_X2'.
+Storing AST representation for module `$abstract\DFFR_X1'.
+Storing AST representation for module `$abstract\DFFR_X2'.
+Storing AST representation for module `$abstract\DFFS_X1'.
+Storing AST representation for module `$abstract\DFFS_X2'.
+Storing AST representation for module `$abstract\DFF_X1'.
+Storing AST representation for module `$abstract\DFF_X2'.
+Storing AST representation for module `$abstract\DLH_X1'.
+Storing AST representation for module `$abstract\DLH_X2'.
+Storing AST representation for module `$abstract\DLL_X1'.
+Storing AST representation for module `$abstract\DLL_X2'.
+Storing AST representation for module `$abstract\FA_X1'.
+Storing AST representation for module `$abstract\FILLCELL_X1'.
+Storing AST representation for module `$abstract\FILLCELL_X2'.
+Storing AST representation for module `$abstract\FILLCELL_X4'.
+Storing AST representation for module `$abstract\FILLCELL_X8'.
+Storing AST representation for module `$abstract\FILLCELL_X16'.
+Storing AST representation for module `$abstract\FILLCELL_X32'.
+Storing AST representation for module `$abstract\HA_X1'.
+Storing AST representation for module `$abstract\INV_X1'.
+Storing AST representation for module `$abstract\INV_X16'.
+Storing AST representation for module `$abstract\INV_X2'.
+Storing AST representation for module `$abstract\INV_X32'.
+Storing AST representation for module `$abstract\INV_X4'.
+Storing AST representation for module `$abstract\INV_X8'.
+Storing AST representation for module `$abstract\LOGIC0_X1'.
+Storing AST representation for module `$abstract\LOGIC1_X1'.
+Storing AST representation for module `$abstract\MUX2_X1'.
+Storing AST representation for module `$abstract\MUX2_X2'.
+Storing AST representation for module `$abstract\NAND2_X1'.
+Storing AST representation for module `$abstract\NAND2_X2'.
+Storing AST representation for module `$abstract\NAND2_X4'.
+Storing AST representation for module `$abstract\NAND3_X1'.
+Storing AST representation for module `$abstract\NAND3_X2'.
+Storing AST representation for module `$abstract\NAND3_X4'.
+Storing AST representation for module `$abstract\NAND4_X1'.
+Storing AST representation for module `$abstract\NAND4_X2'.
+Storing AST representation for module `$abstract\NAND4_X4'.
+Storing AST representation for module `$abstract\NOR2_X1'.
+Storing AST representation for module `$abstract\NOR2_X2'.
+Storing AST representation for module `$abstract\NOR2_X4'.
+Storing AST representation for module `$abstract\NOR3_X1'.
+Storing AST representation for module `$abstract\NOR3_X2'.
+Storing AST representation for module `$abstract\NOR3_X4'.
+Storing AST representation for module `$abstract\NOR4_X1'.
+Storing AST representation for module `$abstract\NOR4_X2'.
+Storing AST representation for module `$abstract\NOR4_X4'.
+Storing AST representation for module `$abstract\OAI211_X1'.
+Storing AST representation for module `$abstract\OAI211_X2'.
+Storing AST representation for module `$abstract\OAI211_X4'.
+Storing AST representation for module `$abstract\OAI21_X1'.
+Storing AST representation for module `$abstract\OAI21_X2'.
+Storing AST representation for module `$abstract\OAI21_X4'.
+Storing AST representation for module `$abstract\OAI221_X1'.
+Storing AST representation for module `$abstract\OAI221_X2'.
+Storing AST representation for module `$abstract\OAI221_X4'.
+Storing AST representation for module `$abstract\OAI222_X1'.
+Storing AST representation for module `$abstract\OAI222_X2'.
+Storing AST representation for module `$abstract\OAI222_X4'.
+Storing AST representation for module `$abstract\OAI22_X1'.
+Storing AST representation for module `$abstract\OAI22_X2'.
+Storing AST representation for module `$abstract\OAI22_X4'.
+Storing AST representation for module `$abstract\OAI33_X1'.
+Storing AST representation for module `$abstract\OR2_X1'.
+Storing AST representation for module `$abstract\OR2_X2'.
+Storing AST representation for module `$abstract\OR2_X4'.
+Storing AST representation for module `$abstract\OR3_X1'.
+Storing AST representation for module `$abstract\OR3_X2'.
+Storing AST representation for module `$abstract\OR3_X4'.
+Storing AST representation for module `$abstract\OR4_X1'.
+Storing AST representation for module `$abstract\OR4_X2'.
+Storing AST representation for module `$abstract\OR4_X4'.
+Storing AST representation for module `$abstract\SDFFRS_X1'.
+Storing AST representation for module `$abstract\SDFFRS_X2'.
+Storing AST representation for module `$abstract\SDFFR_X1'.
+Storing AST representation for module `$abstract\SDFFR_X2'.
+Storing AST representation for module `$abstract\SDFFS_X1'.
+Storing AST representation for module `$abstract\SDFFS_X2'.
+Storing AST representation for module `$abstract\SDFF_X1'.
+Storing AST representation for module `$abstract\SDFF_X2'.
+Storing AST representation for module `$abstract\TBUF_X1'.
+Storing AST representation for module `$abstract\TBUF_X16'.
+Storing AST representation for module `$abstract\TBUF_X2'.
+Storing AST representation for module `$abstract\TBUF_X4'.
+Storing AST representation for module `$abstract\TBUF_X8'.
+Storing AST representation for module `$abstract\TINV_X1'.
+Storing AST representation for module `$abstract\TLAT_X1'.
+Storing AST representation for module `$abstract\XNOR2_X1'.
+Storing AST representation for module `$abstract\XNOR2_X2'.
+Storing AST representation for module `$abstract\XOR2_X1'.
+Storing AST representation for module `$abstract\XOR2_X2'.
+Successfully finished Verilog frontend.
+
+3. Executing Verilog-2005 frontend: ./platforms/nangate45/cells_clkgate.v
+Parsing Verilog input from `./platforms/nangate45/cells_clkgate.v' to AST representation.
+Storing AST representation for module `$abstract\OPENROAD_CLKGATE'.
+Successfully finished Verilog frontend.
+
+4. Executing HIERARCHY pass (managing design hierarchy).
+
+5. Executing AST frontend in derive mode using pre-parsed AST for module `\gcd'.
+Generating RTLIL representation for module `\gcd'.
+
+5.1. Analyzing design hierarchy..
+Top module:  \gcd
+
+5.2. Executing AST frontend in derive mode using pre-parsed AST for module `\GcdUnitDpathRTL_0x4d0fc71ead8d3d9e'.
+Generating RTLIL representation for module `\GcdUnitDpathRTL_0x4d0fc71ead8d3d9e'.
+
+5.3. Executing AST frontend in derive mode using pre-parsed AST for module `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e'.
+Generating RTLIL representation for module `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e'.
+
+5.4. Analyzing design hierarchy..
+Top module:  \gcd
+Used module:     \GcdUnitDpathRTL_0x4d0fc71ead8d3d9e
+Used module:     \GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e
+
+5.5. Executing AST frontend in derive mode using pre-parsed AST for module `\RegRst_0x9f365fdf6c8998a'.
+Generating RTLIL representation for module `\RegRst_0x9f365fdf6c8998a'.
+
+5.6. Executing AST frontend in derive mode using pre-parsed AST for module `\RegEn_0x68db79c4ec1d6e5b'.
+Generating RTLIL representation for module `\RegEn_0x68db79c4ec1d6e5b'.
+
+5.7. Executing AST frontend in derive mode using pre-parsed AST for module `\Subtractor_0x422b1f52edd46a85'.
+Generating RTLIL representation for module `\Subtractor_0x422b1f52edd46a85'.
+
+5.8. Executing AST frontend in derive mode using pre-parsed AST for module `\Mux_0xdd6473406d1a99a'.
+Generating RTLIL representation for module `\Mux_0xdd6473406d1a99a'.
+
+5.9. Executing AST frontend in derive mode using pre-parsed AST for module `\Mux_0x683fa1a418b072c9'.
+Generating RTLIL representation for module `\Mux_0x683fa1a418b072c9'.
+
+5.10. Executing AST frontend in derive mode using pre-parsed AST for module `\ZeroComparator_0x422b1f52edd46a85'.
+Generating RTLIL representation for module `\ZeroComparator_0x422b1f52edd46a85'.
+
+5.11. Executing AST frontend in derive mode using pre-parsed AST for module `\LtComparator_0x422b1f52edd46a85'.
+Generating RTLIL representation for module `\LtComparator_0x422b1f52edd46a85'.
+
+5.12. Analyzing design hierarchy..
+Top module:  \gcd
+Used module:     \GcdUnitDpathRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegEn_0x68db79c4ec1d6e5b
+Used module:         \Subtractor_0x422b1f52edd46a85
+Used module:         \Mux_0xdd6473406d1a99a
+Used module:         \Mux_0x683fa1a418b072c9
+Used module:         \ZeroComparator_0x422b1f52edd46a85
+Used module:         \LtComparator_0x422b1f52edd46a85
+Used module:     \GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegRst_0x9f365fdf6c8998a
+
+5.13. Analyzing design hierarchy..
+Top module:  \gcd
+Used module:     \GcdUnitDpathRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegEn_0x68db79c4ec1d6e5b
+Used module:         \Subtractor_0x422b1f52edd46a85
+Used module:         \Mux_0xdd6473406d1a99a
+Used module:         \Mux_0x683fa1a418b072c9
+Used module:         \ZeroComparator_0x422b1f52edd46a85
+Used module:         \LtComparator_0x422b1f52edd46a85
+Used module:     \GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegRst_0x9f365fdf6c8998a
+Removing unused module `$abstract\OPENROAD_CLKGATE'.
+Removing unused module `$abstract\Subtractor_0x422b1f52edd46a85'.
+Removing unused module `$abstract\Mux_0xdd6473406d1a99a'.
+Removing unused module `$abstract\Mux_0x683fa1a418b072c9'.
+Removing unused module `$abstract\ZeroComparator_0x422b1f52edd46a85'.
+Removing unused module `$abstract\LtComparator_0x422b1f52edd46a85'.
+Removing unused module `$abstract\RegEn_0x68db79c4ec1d6e5b'.
+Removing unused module `$abstract\GcdUnitDpathRTL_0x4d0fc71ead8d3d9e'.
+Removing unused module `$abstract\RegRst_0x9f365fdf6c8998a'.
+Removing unused module `$abstract\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e'.
+Removing unused module `$abstract\gcd'.
+Removed 11 unused modules.
+
+6. Executing HIERARCHY pass (managing design hierarchy).
+Entering generate mode.
+Celltype: fakeram45_*
+Port declaration: output rd_out
+Port declaration: input addr_in
+Port declaration: input we_in
+Port declaration: input wd_in
+Port declaration: input w_mask_in
+Port declaration: input clk
+Port declaration: input ce_in
+
+7. Executing SYNTH pass.
+
+7.1. Executing HIERARCHY pass (managing design hierarchy).
+
+7.1.1. Analyzing design hierarchy..
+Top module:  \gcd
+Used module:     \GcdUnitDpathRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegEn_0x68db79c4ec1d6e5b
+Used module:         \Subtractor_0x422b1f52edd46a85
+Used module:         \Mux_0xdd6473406d1a99a
+Used module:         \Mux_0x683fa1a418b072c9
+Used module:         \ZeroComparator_0x422b1f52edd46a85
+Used module:         \LtComparator_0x422b1f52edd46a85
+Used module:     \GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegRst_0x9f365fdf6c8998a
+
+7.1.2. Analyzing design hierarchy..
+Top module:  \gcd
+Used module:     \GcdUnitDpathRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegEn_0x68db79c4ec1d6e5b
+Used module:         \Subtractor_0x422b1f52edd46a85
+Used module:         \Mux_0xdd6473406d1a99a
+Used module:         \Mux_0x683fa1a418b072c9
+Used module:         \ZeroComparator_0x422b1f52edd46a85
+Used module:         \LtComparator_0x422b1f52edd46a85
+Used module:     \GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e
+Used module:         \RegRst_0x9f365fdf6c8998a
+Removed 0 unused modules.
+
+7.2. Executing PROC pass (convert processes to netlists).
+
+7.2.1. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Cleaned up 0 empty switches.
+
+7.2.2. Executing PROC_RMDEAD pass (remove dead branches from decision trees).
+Marked 1 switch rules as full_case in process $proc$./designs/src/gcd/gcd.v:679$27 in module Mux_0x683fa1a418b072c9.
+Removed 1 dead cases from process $proc$./designs/src/gcd/gcd.v:720$21 in module Mux_0xdd6473406d1a99a.
+Marked 1 switch rules as full_case in process $proc$./designs/src/gcd/gcd.v:720$21 in module Mux_0xdd6473406d1a99a.
+Marked 1 switch rules as full_case in process $proc$./designs/src/gcd/gcd.v:352$16 in module RegRst_0x9f365fdf6c8998a.
+Marked 3 switch rules as full_case in process $proc$./designs/src/gcd/gcd.v:277$10 in module GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.
+Marked 6 switch rules as full_case in process $proc$./designs/src/gcd/gcd.v:192$1 in module GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.
+Removed a total of 1 dead cases.
+
+7.2.3. Executing PROC_PRUNE pass (remove redundant assignments in processes).
+Removed 1 redundant assignment.
+Promoted 26 assignments to connections.
+
+7.2.4. Executing PROC_INIT pass (extract init attributes).
+
+7.2.5. Executing PROC_ARST pass (detect async resets in processes).
+
+7.2.6. Executing PROC_MUX pass (convert decision trees to multiplexers).
+Creating decoders for process `\ZeroComparator_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:636$32'.
+Creating decoders for process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:0$31'.
+Creating decoders for process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:679$27'.
+     1/1: $1$mem2reg_rd$\in_$./designs/src/gcd/gcd.v:0$26_DATA[15:0]$30
+Creating decoders for process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:0$25'.
+Creating decoders for process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:720$21'.
+     1/1: $1$mem2reg_rd$\in_$./designs/src/gcd/gcd.v:0$20_DATA[15:0]$24
+Creating decoders for process `\Subtractor_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:751$18'.
+Creating decoders for process `\RegEn_0x68db79c4ec1d6e5b.$proc$./designs/src/gcd/gcd.v:571$17'.
+     1/1: $0\out[15:0]
+Creating decoders for process `\RegRst_0x9f365fdf6c8998a.$proc$./designs/src/gcd/gcd.v:352$16'.
+     1/1: $0\out[1:0]
+Creating decoders for process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+     1/22: $3\b_reg_en[0:0]
+     2/22: $3\b_mux_sel[0:0]
+     3/22: $3\a_reg_en[0:0]
+     4/22: $3\a_mux_sel[1:0]
+     5/22: $3\resp_val[0:0]
+     6/22: $3\req_rdy[0:0]
+     7/22: $2\b_reg_en[0:0]
+     8/22: $2\b_mux_sel[0:0]
+     9/22: $2\a_reg_en[0:0]
+    10/22: $2\a_mux_sel[1:0]
+    11/22: $2\resp_val[0:0]
+    12/22: $2\req_rdy[0:0]
+    13/22: $2\do_sub[0:0]
+    14/22: $2\do_swap[0:0]
+    15/22: $1\b_reg_en[0:0]
+    16/22: $1\b_mux_sel[0:0]
+    17/22: $1\a_reg_en[0:0]
+    18/22: $1\a_mux_sel[1:0]
+    19/22: $1\resp_val[0:0]
+    20/22: $1\req_rdy[0:0]
+    21/22: $1\do_swap[0:0]
+    22/22: $1\do_sub[0:0]
+Creating decoders for process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:192$1'.
+     1/6: $6\next_state__0[1:0]
+     2/6: $5\next_state__0[1:0]
+     3/6: $4\next_state__0[1:0]
+     4/6: $3\next_state__0[1:0]
+     5/6: $2\next_state__0[1:0]
+     6/6: $1\next_state__0[1:0]
+Creating decoders for process `\LtComparator_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:606$34'.
+
+7.2.7. Executing PROC_DLATCH pass (convert process syncs to latches).
+No latch inferred for signal `\ZeroComparator_0x422b1f52edd46a85.\out' from process `\ZeroComparator_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:636$32'.
+No latch inferred for signal `\Mux_0x683fa1a418b072c9.\in_[0]' from process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:0$31'.
+No latch inferred for signal `\Mux_0x683fa1a418b072c9.\in_[1]' from process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:0$31'.
+No latch inferred for signal `\Mux_0x683fa1a418b072c9.\in_[2]' from process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:0$31'.
+No latch inferred for signal `\Mux_0x683fa1a418b072c9.\out' from process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:679$27'.
+No latch inferred for signal `\Mux_0x683fa1a418b072c9.$mem2reg_rd$\in_$./designs/src/gcd/gcd.v:0$26_ADDR' from process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:679$27'.
+No latch inferred for signal `\Mux_0x683fa1a418b072c9.$mem2reg_rd$\in_$./designs/src/gcd/gcd.v:0$26_DATA' from process `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:679$27'.
+No latch inferred for signal `\Mux_0xdd6473406d1a99a.\in_[0]' from process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:0$25'.
+No latch inferred for signal `\Mux_0xdd6473406d1a99a.\in_[1]' from process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:0$25'.
+No latch inferred for signal `\Mux_0xdd6473406d1a99a.\out' from process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:720$21'.
+No latch inferred for signal `\Mux_0xdd6473406d1a99a.$mem2reg_rd$\in_$./designs/src/gcd/gcd.v:0$20_ADDR' from process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:720$21'.
+No latch inferred for signal `\Mux_0xdd6473406d1a99a.$mem2reg_rd$\in_$./designs/src/gcd/gcd.v:0$20_DATA' from process `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:720$21'.
+No latch inferred for signal `\Subtractor_0x422b1f52edd46a85.\out' from process `\Subtractor_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:751$18'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\req_rdy' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\resp_val' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\a_mux_sel' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\b_mux_sel' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\b_reg_en' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\a_reg_en' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\current_state__1' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+Latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\do_sub' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10': $auto$proc_dlatch.cc:417:proc_dlatch$227
+Latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\do_swap' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10': $auto$proc_dlatch.cc:417:proc_dlatch$230
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\curr_state__0' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:192$1'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\next_state__0' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:192$1'.
+No latch inferred for signal `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.\state$in_' from process `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:192$1'.
+No latch inferred for signal `\LtComparator_0x422b1f52edd46a85.\out' from process `\LtComparator_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:606$34'.
+
+7.2.8. Executing PROC_DFF pass (convert process syncs to FFs).
+Creating register for signal `\RegEn_0x68db79c4ec1d6e5b.\out' using process `\RegEn_0x68db79c4ec1d6e5b.$proc$./designs/src/gcd/gcd.v:571$17'.
+  created $dff cell `$procdff$231' with positive edge clock.
+Creating register for signal `\RegRst_0x9f365fdf6c8998a.\out' using process `\RegRst_0x9f365fdf6c8998a.$proc$./designs/src/gcd/gcd.v:352$16'.
+  created $dff cell `$procdff$232' with positive edge clock.
+
+7.2.9. Executing PROC_CLEAN pass (remove empty switches from decision trees).
+Removing empty process `ZeroComparator_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:636$32'.
+Removing empty process `Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:0$31'.
+Found and cleaned up 1 empty switch in `\Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:679$27'.
+Removing empty process `Mux_0x683fa1a418b072c9.$proc$./designs/src/gcd/gcd.v:679$27'.
+Removing empty process `Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:0$25'.
+Found and cleaned up 1 empty switch in `\Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:720$21'.
+Removing empty process `Mux_0xdd6473406d1a99a.$proc$./designs/src/gcd/gcd.v:720$21'.
+Removing empty process `Subtractor_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:751$18'.
+Found and cleaned up 1 empty switch in `\RegEn_0x68db79c4ec1d6e5b.$proc$./designs/src/gcd/gcd.v:571$17'.
+Removing empty process `RegEn_0x68db79c4ec1d6e5b.$proc$./designs/src/gcd/gcd.v:571$17'.
+Found and cleaned up 1 empty switch in `\RegRst_0x9f365fdf6c8998a.$proc$./designs/src/gcd/gcd.v:352$16'.
+Removing empty process `RegRst_0x9f365fdf6c8998a.$proc$./designs/src/gcd/gcd.v:352$16'.
+Found and cleaned up 3 empty switches in `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+Removing empty process `GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:277$10'.
+Found and cleaned up 6 empty switches in `\GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:192$1'.
+Removing empty process `GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.$proc$./designs/src/gcd/gcd.v:192$1'.
+Removing empty process `LtComparator_0x422b1f52edd46a85.$proc$./designs/src/gcd/gcd.v:606$34'.
+Cleaned up 13 empty switches.
+
+7.3. Executing FLATTEN pass (flatten design).
+Using template GcdUnitDpathRTL_0x4d0fc71ead8d3d9e for cells of type GcdUnitDpathRTL_0x4d0fc71ead8d3d9e.
+Using template GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e for cells of type GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.
+Using template Subtractor_0x422b1f52edd46a85 for cells of type Subtractor_0x422b1f52edd46a85.
+Using template Mux_0x683fa1a418b072c9 for cells of type Mux_0x683fa1a418b072c9.
+Using template RegEn_0x68db79c4ec1d6e5b for cells of type RegEn_0x68db79c4ec1d6e5b.
+Using template Mux_0xdd6473406d1a99a for cells of type Mux_0xdd6473406d1a99a.
+Using template ZeroComparator_0x422b1f52edd46a85 for cells of type ZeroComparator_0x422b1f52edd46a85.
+Using template LtComparator_0x422b1f52edd46a85 for cells of type LtComparator_0x422b1f52edd46a85.
+Using template RegRst_0x9f365fdf6c8998a for cells of type RegRst_0x9f365fdf6c8998a.
+<suppressed ~10 debug messages>
+No more expansions possible.
+Deleting now unused module ZeroComparator_0x422b1f52edd46a85.
+Deleting now unused module Mux_0x683fa1a418b072c9.
+Deleting now unused module Mux_0xdd6473406d1a99a.
+Deleting now unused module Subtractor_0x422b1f52edd46a85.
+Deleting now unused module RegEn_0x68db79c4ec1d6e5b.
+Deleting now unused module RegRst_0x9f365fdf6c8998a.
+Deleting now unused module GcdUnitCtrlRTL_0x4d0fc71ead8d3d9e.
+Deleting now unused module GcdUnitDpathRTL_0x4d0fc71ead8d3d9e.
+Deleting now unused module LtComparator_0x422b1f52edd46a85.
+
+7.4. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+<suppressed ~19 debug messages>
+
+7.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 11 unused cells and 150 unused wires.
+<suppressed ~14 debug messages>
+
+7.6. Executing CHECK pass (checking for obvious problems).
+checking module gcd..
+found and reported 0 problems.
+
+7.7. Executing OPT pass (performing simple optimizations).
+
+7.7.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.7.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+<suppressed ~9 debug messages>
+Removed a total of 3 cells.
+
+7.7.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$102.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$108.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$114.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$120.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$126.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$132.
+    dead port 2/2 on $mux $techmap\ctrl.$procmux$174.
+    dead port 2/2 on $mux $techmap\ctrl.$procmux$183.
+    dead port 2/2 on $mux $techmap\ctrl.$procmux$192.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$52.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$55.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$60.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$63.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$68.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$71.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$76.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$79.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$85.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$88.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$93.
+    dead port 1/2 on $mux $techmap\ctrl.$procmux$96.
+Removed 21 multiplexer ports.
+<suppressed ~11 debug messages>
+
+7.7.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+    New ctrl vector for $mux cell $techmap\ctrl.$procmux$105: { }
+    New ctrl vector for $mux cell $techmap\ctrl.$procmux$129: { }
+  Optimizing cells in module \gcd.
+Performed a total of 2 changes.
+
+7.7.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+7.7.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.7.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 26 unused wires.
+<suppressed ~1 debug messages>
+
+7.7.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.7.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+7.7.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+7.7.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+Performed a total of 0 changes.
+
+7.7.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.7.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.7.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+
+7.7.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.7.16. Finished OPT passes. (There is nothing left to do.)
+
+7.8. Executing WREDUCE pass (reducing word size of cells).
+Removed top 30 bits (of 32) from mux cell gcd.$techmap\ctrl.$ternary$./designs/src/gcd/gcd.v:0$14 ($mux).
+Removed top 1 bits (of 2) from port B of cell gcd.$techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$12 ($eq).
+Removed top 1 bits (of 2) from port B of cell gcd.$techmap\dpath.a_mux.$procmux$39_CMP0 ($eq).
+Removed top 30 bits (of 32) from wire gcd.$techmap\ctrl.$ternary$./designs/src/gcd/gcd.v:0$14_Y.
+
+7.9. Executing PEEPOPT pass (run peephole optimizers).
+
+7.10. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 1 unused wires.
+<suppressed ~1 debug messages>
+
+7.11. Executing TECHMAP pass (map to technology primitives).
+
+7.11.1. Executing Verilog-2005 frontend: /OpenROAD-flow/tools/build/yosys/bin/../share/yosys/cmp2lut.v
+Parsing Verilog input from `/OpenROAD-flow/tools/build/yosys/bin/../share/yosys/cmp2lut.v' to AST representation.
+Generating RTLIL representation for module `\_90_lut_cmp_'.
+Successfully finished Verilog frontend.
+
+7.11.2. Continuing TECHMAP pass.
+No more expansions possible.
+<suppressed ~30 debug messages>
+
+7.12. Executing ALUMACC pass (create $alu and $macc cells).
+Extracting $alu and $macc cells in module gcd:
+  creating $macc model for $techmap\dpath.sub.$sub$./designs/src/gcd/gcd.v:0$19 ($sub).
+  creating $alu model for $macc $techmap\dpath.sub.$sub$./designs/src/gcd/gcd.v:0$19.
+  creating $alu model for $techmap\dpath.a_lt_b.$lt$./designs/src/gcd/gcd.v:0$35 ($lt): merged with $techmap\dpath.sub.$sub$./designs/src/gcd/gcd.v:0$19.
+  creating $alu cell for $techmap\dpath.sub.$sub$./designs/src/gcd/gcd.v:0$19, $techmap\dpath.a_lt_b.$lt$./designs/src/gcd/gcd.v:0$35: $auto$alumacc.cc:485:replace_alu$234
+  created 1 $alu and 0 $macc cells.
+
+7.13. Executing SHARE pass (SAT-based resource sharing).
+
+7.14. Executing OPT pass (performing simple optimizations).
+
+7.14.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+<suppressed ~2 debug messages>
+
+7.14.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.14.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~10 debug messages>
+
+7.14.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+Performed a total of 0 changes.
+
+7.14.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.14.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.14.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 2 unused wires.
+<suppressed ~1 debug messages>
+
+7.14.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.14.9. Finished OPT passes. (There is nothing left to do.)
+
+7.15. Executing FSM pass (extract and optimize FSM).
+
+7.15.1. Executing FSM_DETECT pass (finding FSMs in design).
+Found FSM state register gcd.ctrl.state.out.
+
+7.15.2. Executing FSM_EXTRACT pass (extracting FSM from design).
+Extracting FSM `\ctrl.state.out' from module `\gcd'.
+  found $dff cell for state register: $techmap\ctrl.state.$procdff$232
+  root of input selection tree: $techmap\ctrl.state.$0\out[1:0]
+  found reset state: 2'00 (guessed from mux tree)
+  found ctrl input: \reset
+  found ctrl input: $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$15_Y
+  found ctrl input: $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$12_Y
+  found ctrl input: $techmap\ctrl.$auto$rtlil.cc:1897:And$222
+  found ctrl input: $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$4_Y
+  found state code: 2'01
+  found ctrl input: $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$7_Y
+  found state code: 2'10
+  found ctrl input: $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$9_Y
+  found state code: 2'00
+  found ctrl output: $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$15_Y
+  found ctrl output: $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$12_Y
+  found ctrl output: $techmap\ctrl.$auto$rtlil.cc:1897:And$222
+  ctrl inputs: { $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$4_Y $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$7_Y $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$9_Y \reset }
+  ctrl outputs: { $techmap\ctrl.state.$0\out[1:0] $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$12_Y $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$15_Y $techmap\ctrl.$auto$rtlil.cc:1897:And$222 }
+  transition:       2'00 4'0--0 ->       2'00 5'00001
+  transition:       2'00 4'1--0 ->       2'01 5'01001
+  transition:       2'00 4'---1 ->       2'00 5'00001
+  transition:       2'10 4'--00 ->       2'10 5'10010
+  transition:       2'10 4'--10 ->       2'00 5'00010
+  transition:       2'10 4'---1 ->       2'00 5'00010
+  transition:       2'01 4'-0-0 ->       2'01 5'01100
+  transition:       2'01 4'-1-0 ->       2'10 5'10100
+  transition:       2'01 4'---1 ->       2'00 5'00100
+
+7.15.3. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\ctrl.state.out$239' from module `\gcd'.
+
+7.15.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 11 unused cells and 16 unused wires.
+<suppressed ~18 debug messages>
+
+7.15.5. Executing FSM_OPT pass (simple optimizations of FSMs).
+Optimizing FSM `$fsm$\ctrl.state.out$239' from module `\gcd'.
+  Removing unused output signal $techmap\ctrl.state.$0\out[1:0] [0].
+  Removing unused output signal $techmap\ctrl.state.$0\out[1:0] [1].
+
+7.15.6. Executing FSM_RECODE pass (re-assigning FSM state encoding).
+Recoding FSM `$fsm$\ctrl.state.out$239' from module `\gcd' using `auto' encoding:
+  mapping auto encoding to `one-hot` for this FSM.
+  00 -> --1
+  10 -> -1-
+  01 -> 1--
+
+7.15.7. Executing FSM_INFO pass (dumping all available information on FSM cells).
+
+FSM `$fsm$\ctrl.state.out$239' from module `\gcd':
+-------------------------------------
+
+  Information on FSM $fsm$\ctrl.state.out$239 (\ctrl.state.out):
+
+  Number of input signals:    4
+  Number of output signals:   3
+  Number of state bits:       3
+
+  Input signals:
+    0: \reset
+    1: $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$9_Y
+    2: $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$7_Y
+    3: $techmap\ctrl.$logic_and$./designs/src/gcd/gcd.v:0$4_Y
+
+  Output signals:
+    0: $techmap\ctrl.$auto$rtlil.cc:1897:And$222
+    1: $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$15_Y
+    2: $techmap\ctrl.$eq$./designs/src/gcd/gcd.v:0$12_Y
+
+  State encoding:
+    0:      3'--1  <RESET STATE>
+    1:      3'-1-
+    2:      3'1--
+
+  Transition Table (state_in, ctrl_in, state_out, ctrl_out):
+      0:     0 4'0--0   ->     0 3'001
+      1:     0 4'---1   ->     0 3'001
+      2:     0 4'1--0   ->     2 3'001
+      3:     1 4'--10   ->     0 3'010
+      4:     1 4'---1   ->     0 3'010
+      5:     1 4'--00   ->     1 3'010
+      6:     2 4'---1   ->     0 3'100
+      7:     2 4'-1-0   ->     1 3'100
+      8:     2 4'-0-0   ->     2 3'100
+
+-------------------------------------
+
+7.15.8. Executing FSM_MAP pass (mapping FSMs to basic logic).
+Mapping FSM `$fsm$\ctrl.state.out$239' from module `\gcd'.
+
+7.16. Executing OPT pass (performing simple optimizations).
+
+7.16.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+<suppressed ~4 debug messages>
+
+7.16.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.16.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.16.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 7 unused wires.
+<suppressed ~1 debug messages>
+
+7.16.5. Finished fast OPT passes.
+
+7.17. Executing MEMORY pass.
+
+7.17.1. Executing OPT_MEM pass (optimize memories).
+Performed a total of 0 transformations.
+
+7.17.2. Executing MEMORY_DFF pass (merging $dff cells to $memrd and $memwr).
+
+7.17.3. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+
+7.17.4. Executing MEMORY_SHARE pass (consolidating $memrd/$memwr cells).
+
+7.17.5. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+
+7.17.6. Executing MEMORY_COLLECT pass (generating $mem cells).
+
+7.18. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+
+7.19. Executing OPT pass (performing simple optimizations).
+
+7.19.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+<suppressed ~8 debug messages>
+
+7.19.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.19.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.19.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 2 unused cells and 4 unused wires.
+<suppressed ~3 debug messages>
+
+7.19.5. Finished fast OPT passes.
+
+7.20. Executing MEMORY_MAP pass (converting $mem cells to logic and flip-flops).
+
+7.21. Executing OPT pass (performing simple optimizations).
+
+7.21.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.21.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.21.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  Evaluating internal representation of mux trees.
+  Analyzing evaluation results.
+Removed 0 multiplexer ports.
+<suppressed ~4 debug messages>
+
+7.21.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+Performed a total of 0 changes.
+
+7.21.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.21.6. Executing OPT_SHARE pass.
+
+7.21.7. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.21.8. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+
+7.21.9. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.21.10. Finished OPT passes. (There is nothing left to do.)
+
+7.22. Executing TECHMAP pass (map to technology primitives).
+
+7.22.1. Executing Verilog-2005 frontend: <techmap.v>
+Parsing Verilog input from `<techmap.v>' to AST representation.
+Generating RTLIL representation for module `\_90_simplemap_bool_ops'.
+Generating RTLIL representation for module `\_90_simplemap_reduce_ops'.
+Generating RTLIL representation for module `\_90_simplemap_logic_ops'.
+Generating RTLIL representation for module `\_90_simplemap_compare_ops'.
+Generating RTLIL representation for module `\_90_simplemap_various'.
+Generating RTLIL representation for module `\_90_simplemap_registers'.
+Generating RTLIL representation for module `\_90_shift_ops_shr_shl_sshl_sshr'.
+Generating RTLIL representation for module `\_90_shift_shiftx'.
+Generating RTLIL representation for module `\_90_fa'.
+Generating RTLIL representation for module `\_90_lcu'.
+Generating RTLIL representation for module `\_90_alu'.
+Generating RTLIL representation for module `\_90_macc'.
+Generating RTLIL representation for module `\_90_alumacc'.
+Generating RTLIL representation for module `\$__div_mod_u'.
+Generating RTLIL representation for module `\$__div_mod'.
+Generating RTLIL representation for module `\_90_div'.
+Generating RTLIL representation for module `\_90_mod'.
+Generating RTLIL representation for module `\_90_pow'.
+Generating RTLIL representation for module `\_90_pmux'.
+Generating RTLIL representation for module `\_90_lut'.
+Successfully finished Verilog frontend.
+
+7.22.2. Continuing TECHMAP pass.
+Using extmapper simplemap for cells of type $logic_not.
+Using template $paramod\_90_alu\A_SIGNED=0\B_SIGNED=0\A_WIDTH=16\B_WIDTH=16\Y_WIDTH=16 for cells of type $alu.
+Using extmapper simplemap for cells of type $and.
+Using extmapper simplemap for cells of type $not.
+Using extmapper simplemap for cells of type $dff.
+Using extmapper simplemap for cells of type $reduce_or.
+Using extmapper simplemap for cells of type $eq.
+Using extmapper simplemap for cells of type $mux.
+Using extmapper simplemap for cells of type $or.
+Using extmapper simplemap for cells of type $logic_and.
+Using template $paramod\_90_pmux\WIDTH=16\S_WIDTH=2 for cells of type $pmux.
+Using extmapper simplemap for cells of type $xor.
+Using extmapper simplemap for cells of type $pos.
+Using template $paramod\_90_lcu\WIDTH=16 for cells of type $lcu.
+No more expansions possible.
+<suppressed ~270 debug messages>
+
+7.23. Executing OPT pass (performing simple optimizations).
+
+7.23.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+<suppressed ~24 debug messages>
+
+7.23.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+<suppressed ~3 debug messages>
+Removed a total of 1 cells.
+
+7.23.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.23.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 72 unused wires.
+<suppressed ~1 debug messages>
+
+7.23.5. Finished fast OPT passes.
+
+7.24. Executing ABC pass (technology mapping using ABC).
+
+7.24.1. Extracting gate netlist of module `\gcd' to `<abc-temp-dir>/input.blif'..
+Extracted 301 gates and 373 wires to a netlist network with 70 inputs and 52 outputs.
+
+7.24.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_library <abc-temp-dir>/stdcells.genlib 
+ABC: Entered genlib library with 13 gates from file "<abc-temp-dir>/stdcells.genlib".
+ABC: + strash 
+ABC: + dretime 
+ABC: + map 
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+7.24.1.2. Re-integrating ABC results.
+ABC RESULTS:               AND cells:        6
+ABC RESULTS:            ANDNOT cells:       96
+ABC RESULTS:               MUX cells:       64
+ABC RESULTS:              NAND cells:        1
+ABC RESULTS:               NOR cells:        7
+ABC RESULTS:               NOT cells:       23
+ABC RESULTS:                OR cells:       39
+ABC RESULTS:             ORNOT cells:       23
+ABC RESULTS:              XNOR cells:        6
+ABC RESULTS:               XOR cells:       25
+ABC RESULTS:        internal signals:      251
+ABC RESULTS:           input signals:       70
+ABC RESULTS:          output signals:       52
+Removing temp directory.
+
+7.25. Executing OPT pass (performing simple optimizations).
+
+7.25.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+7.25.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+7.25.3. Executing OPT_RMDFF pass (remove dff with constant values).
+
+7.25.4. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 238 unused wires.
+<suppressed ~39 debug messages>
+
+7.25.5. Finished fast OPT passes.
+
+7.26. Executing HIERARCHY pass (managing design hierarchy).
+
+7.26.1. Analyzing design hierarchy..
+Top module:  \gcd
+
+7.26.2. Analyzing design hierarchy..
+Top module:  \gcd
+Removed 0 unused modules.
+
+7.27. Printing statistics.
+
+=== gcd ===
+
+   Number of wires:                375
+   Number of wire bits:           1008
+   Number of public wires:         102
+   Number of public wire bits:     735
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                325
+     $_ANDNOT_                      96
+     $_AND_                          6
+     $_DFF_P_                       35
+     $_MUX_                         64
+     $_NAND_                         1
+     $_NOR_                          7
+     $_NOT_                         23
+     $_ORNOT_                       23
+     $_OR_                          39
+     $_XNOR_                         6
+     $_XOR_                         25
+
+7.28. Executing CHECK pass (checking for obvious problems).
+checking module gcd..
+found and reported 0 problems.
+
+8. Executing OPT pass (performing simple optimizations).
+
+8.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+8.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+8.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+8.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+Performed a total of 0 changes.
+
+8.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+8.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+8.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 91 unused wires.
+<suppressed ~91 debug messages>
+
+8.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+8.9. Finished OPT passes. (There is nothing left to do.)
+
+9. Executing TECHMAP pass (map to technology primitives).
+
+9.1. Executing Verilog-2005 frontend: ./platforms/nangate45/cells_latch.v
+Parsing Verilog input from `./platforms/nangate45/cells_latch.v' to AST representation.
+Generating RTLIL representation for module `\$_DLATCH_P_'.
+Generating RTLIL representation for module `\$_DLATCH_N_'.
+Successfully finished Verilog frontend.
+
+9.2. Continuing TECHMAP pass.
+No more expansions possible.
+
+10. Executing DFFLIBMAP pass (mapping DFF cells to sequential cells from liberty file).
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFF_X1 (noninv, pins=4, area=4.52) is a direct match for cell type $_DFF_P_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFR_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN0_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFS_X1 (noninv, pins=5, area=5.32) is a direct match for cell type $_DFF_PN1_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  cell DFFRS_X1 (noninv, pins=6, area=6.38) is a direct match for cell type $_DFFSR_PNN_.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFRS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFR_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFFS_X2' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X1' - skipping.
+Warning: Found unsupported expression 'SE*SI+D*!SE' in pin attribute of cell 'SDFF_X2' - skipping.
+  create mapping for $_DFF_PP0_ from mapping for $_DFF_PN0_.
+  create mapping for $_DFF_PP1_ from mapping for $_DFF_PN1_.
+  create mapping for $_DFFSR_PPN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PNP_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_PPP_ from mapping for $_DFFSR_PNP_.
+  create mapping for $_DFF_N_ from mapping for $_DFF_P_.
+  create mapping for $_DFF_NN0_ from mapping for $_DFF_PN0_.
+  create mapping for $_DFF_NP0_ from mapping for $_DFF_NN0_.
+  create mapping for $_DFF_NN1_ from mapping for $_DFF_NN0_.
+  create mapping for $_DFF_NP1_ from mapping for $_DFF_NN1_.
+  create mapping for $_DFFSR_NNN_ from mapping for $_DFFSR_PNN_.
+  create mapping for $_DFFSR_NPN_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NNP_ from mapping for $_DFFSR_NNN_.
+  create mapping for $_DFFSR_NPP_ from mapping for $_DFFSR_NNP_.
+  final dff cell mappings:
+    \DFF_X1 _DFF_N_ (.CK(~C), .D( D), .Q( Q), .QN(~Q));
+    \DFF_X1 _DFF_P_ (.CK( C), .D( D), .Q( Q), .QN(~Q));
+    \DFFR_X1 _DFF_NN0_ (.CK(~C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFR_X1 _DFF_NN1_ (.CK(~C), .D(~D), .Q(~Q), .QN( Q), .RN( R));
+    \DFFR_X1 _DFF_NP0_ (.CK(~C), .D( D), .Q( Q), .QN(~Q), .RN(~R));
+    \DFFR_X1 _DFF_NP1_ (.CK(~C), .D(~D), .Q(~Q), .QN( Q), .RN(~R));
+    \DFFR_X1 _DFF_PN0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R));
+    \DFFS_X1 _DFF_PN1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN( R));
+    \DFFR_X1 _DFF_PP0_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN(~R));
+    \DFFS_X1 _DFF_PP1_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .SN(~R));
+    \DFFRS_X1 _DFFSR_NNN_ (.CK(~C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    \DFFRS_X1 _DFFSR_NNP_ (.CK(~C), .D( D), .Q( Q), .QN(~Q), .RN(~R), .SN( S));
+    \DFFRS_X1 _DFFSR_NPN_ (.CK(~C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN(~S));
+    \DFFRS_X1 _DFFSR_NPP_ (.CK(~C), .D( D), .Q( Q), .QN(~Q), .RN(~R), .SN(~S));
+    \DFFRS_X1 _DFFSR_PNN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN( S));
+    \DFFRS_X1 _DFFSR_PNP_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN(~R), .SN( S));
+    \DFFRS_X1 _DFFSR_PPN_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN( R), .SN(~S));
+    \DFFRS_X1 _DFFSR_PPP_ (.CK( C), .D( D), .Q( Q), .QN(~Q), .RN(~R), .SN(~S));
+Mapping DFF cells in module `\gcd':
+  mapped 35 $_DFF_P_ cells to \DFF_X1 cells.
+
+11. Executing OPT pass (performing simple optimizations).
+
+11.1. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+11.2. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+11.3. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.4. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+Performed a total of 0 changes.
+
+11.5. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+11.6. Executing OPT_RMDFF pass (remove dff with constant values).
+
+11.7. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 1 unused cells and 2 unused wires.
+<suppressed ~2 debug messages>
+
+11.8. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+11.9. Rerunning OPT passes. (Maybe there is more to do..)
+
+11.10. Executing OPT_MUXTREE pass (detect dead branches in mux trees).
+Running muxtree optimizer on module \gcd..
+  Creating internal representation of mux trees.
+  No muxes found in this module.
+Removed 0 multiplexer ports.
+
+11.11. Executing OPT_REDUCE pass (consolidate $*mux and $reduce_* inputs).
+  Optimizing cells in module \gcd.
+Performed a total of 0 changes.
+
+11.12. Executing OPT_MERGE pass (detect identical cells).
+Finding identical cells in module `\gcd'.
+Removed a total of 0 cells.
+
+11.13. Executing OPT_RMDFF pass (remove dff with constant values).
+
+11.14. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+
+11.15. Executing OPT_EXPR pass (perform const folding).
+Optimizing module gcd.
+
+11.16. Finished OPT passes. (There is nothing left to do.)
+
+12. Executing ABC pass (technology mapping using ABC).
+
+12.1. Extracting gate netlist of module `\gcd' to `<abc-temp-dir>/input.blif'..
+Extracted 289 gates and 360 wires to a netlist network with 71 inputs and 52 outputs.
+
+12.1.1. Executing ABC.
+Running ABC command: <yosys-exe-dir>/yosys-abc -s -f <abc-temp-dir>/abc.script 2>&1
+ABC: ABC command line: "source <abc-temp-dir>/abc.script".
+ABC: 
+ABC: + read_blif <abc-temp-dir>/input.blif 
+ABC: + read_lib -w /OpenROAD-flow/flow/./objects/nangate45/gcd/merged.lib 
+ABC: Parsing finished successfully.  Parsing time =     0.14 sec
+ABC: Scl_LibertyReadGenlib() skipped cell "ANTENNA_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "AOI211_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATETST_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X1" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X2" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X4" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped cell "CLKGATE_X8" without logic function.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLH_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "DLL_X2".
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X2" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X4" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X8" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X16" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "FILLCELL_X32" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC0_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "LOGIC1_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped cell "OAI211_X1" due to dont_use attribute.
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFRS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFR_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFFS_X2".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "SDFF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X1".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X2".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X4".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X8".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TBUF_X16".
+ABC: Scl_LibertyReadGenlib() skipped three-state cell "TINV_X1".
+ABC: Scl_LibertyReadGenlib() skipped sequential cell "TLAT_X1".
+ABC: Library "nangate45_merged" from "/OpenROAD-flow/flow/./objects/nangate45/gcd/merged.lib" has 88 cells (35 skipped: 21 seq; 6 tri-state; 8 no func; 11 dont_use).  Time =     0.19 sec
+ABC: Memory =    8.83 MB. Time =     0.19 sec
+ABC: Warning: Detected 2 multi-output gates (for example, "FA_X1").
+ABC: + read_constr -v /OpenROAD-flow/flow/./objects/nangate45/gcd/abc.constr 
+ABC: Setting driving cell to be "BUF_X1".
+ABC: Setting output load to be 3.898000.
+ABC: + strash 
+ABC: + ifraig 
+ABC: + scorr 
+ABC: Warning: The network is combinational (run "fraig" or "fraig_sweep").
+ABC: + dc2 
+ABC: + dretime 
+ABC: + retime -o -D 10000 
+ABC: + strash 
+ABC: + &get -n 
+ABC: + &dch -f 
+ABC: + &nf -D 10000 
+ABC: + &put 
+ABC: + buffer 
+ABC: + upsize -D 10000 
+ABC: Current delay (905.17 ps) does not exceed the target delay (10000.00 ps). Upsizing is not performed.
+ABC: + dnsize -D 10000 
+ABC: + stime -p 
+ABC: WireLoad = "none"  Gates =    237 ( 25.3 %)   Cap =  3.6 ff (  1.9 %)   Area =      249.24 ( 89.9 %)   Delay =   864.79 ps  ( 27.8 %)               
+ABC: Path  0 --       3 : 0    1 pi        A =   0.00  Df =   2.7   -0.7 ps  S =   5.6 ps  Cin =  0.0 ff  Cout =   1.0 ff  Cmax =   0.0 ff  G =    0  
+ABC: Path  1 --     174 : 1    5 BUF_X1    A =   0.80  Df =  41.5   -5.0 ps  S =  23.5 ps  Cin =  0.9 ff  Cout =   9.1 ff  Cmax =  60.7 ff  G =  917  
+ABC: Path  2 --     177 : 2    2 XOR2_X1   A =   1.60  Df = 104.0  -12.3 ps  S =  33.3 ps  Cin =  2.3 ff  Cout =   4.2 ff  Cmax =  25.3 ff  G =  176  
+ABC: Path  3 --     180 : 3    2 AOI21_X1  A =   1.06  Df = 137.1  -13.4 ps  S =  25.2 ps  Cin =  1.6 ff  Cout =   2.5 ff  Cmax =  25.3 ff  G =  158  
+ABC: Path  4 --     181 : 3    3 OAI21_X1  A =   1.06  Df = 166.2   -4.6 ps  S =  26.7 ps  Cin =  1.6 ff  Cout =   3.5 ff  Cmax =  26.1 ff  G =  212  
+ABC: Path  5 --     184 : 3    3 AOI21_X1  A =   1.06  Df = 202.5  -12.4 ps  S =  33.3 ps  Cin =  1.6 ff  Cout =   4.2 ff  Cmax =  25.3 ff  G =  259  
+ABC: Path  6 --     185 : 3    3 OAI21_X1  A =   1.06  Df = 232.9   -3.5 ps  S =  26.7 ps  Cin =  1.6 ff  Cout =   3.5 ff  Cmax =  26.1 ff  G =  212  
+ABC: Path  7 --     188 : 3    3 AOI21_X1  A =   1.06  Df = 270.9  -14.1 ps  S =  33.3 ps  Cin =  1.6 ff  Cout =   4.2 ff  Cmax =  25.3 ff  G =  259  
+ABC: Path  8 --     189 : 3    2 OAI21_X1  A =   1.06  Df = 295.3   -0.5 ps  S =  22.5 ps  Cin =  1.6 ff  Cout =   2.6 ff  Cmax =  26.1 ff  G =  158  
+ABC: Path  9 --     191 : 3    2 OAI21_X1  A =   1.06  Df = 323.6   -2.6 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  237  
+ABC: Path 10 --     193 : 3    2 OAI21_X1  A =   1.06  Df = 362.0  -14.1 ps  S =  29.7 ps  Cin =  1.6 ff  Cout =   4.1 ff  Cmax =  26.1 ff  G =  256  
+ABC: Path 11 --     194 : 3    2 OAI21_X1  A =   1.06  Df = 393.0   -4.1 ps  S =  28.5 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  26.1 ff  G =  237  
+ABC: Path 12 --     196 : 3    3 OAI21_X1  A =   1.06  Df = 437.8  -16.4 ps  S =  36.2 ps  Cin =  1.6 ff  Cout =   5.5 ff  Cmax =  26.1 ff  G =  351  
+ABC: Path 13 --     197 : 5    2 OAI221_X1 A =   1.60  Df = 479.9   -2.9 ps  S =  39.9 ps  Cin =  1.6 ff  Cout =   2.6 ff  Cmax =  22.2 ff  G =  159  
+ABC: Path 14 --     198 : 3    3 AND3_X1   A =   1.33  Df = 539.0  -16.3 ps  S =  17.3 ps  Cin =  0.9 ff  Cout =   5.0 ff  Cmax =  60.4 ff  G =  528  
+ABC: Path 15 --     199 : 4    2 OAI22_X1  A =   1.33  Df = 573.9   -8.5 ps  S =  37.7 ps  Cin =  1.6 ff  Cout =   3.3 ff  Cmax =  23.2 ff  G =  199  
+ABC: Path 16 --     200 : 3    2 AOI21_X1  A =   1.06  Df = 606.2   -8.0 ps  S =  28.7 ps  Cin =  1.6 ff  Cout =   3.2 ff  Cmax =  25.3 ff  G =  203  
+ABC: Path 17 --     201 : 3    3 OAI21_X1  A =   1.06  Df = 644.7  -11.4 ps  S =  30.1 ps  Cin =  1.6 ff  Cout =   4.2 ff  Cmax =  26.1 ff  G =  255  
+ABC: Path 18 --     207 : 4    7 AND4_X1   A =   1.60  Df = 732.4  -43.4 ps  S =  31.6 ps  Cin =  0.9 ff  Cout =  10.8 ff  Cmax =  60.3 ff  G = 1136  
+ABC: Path 19 --     223 : 1   10 BUF_X1    A =   0.80  Df = 797.3  -60.1 ps  S =  41.4 ps  Cin =  0.9 ff  Cout =  16.9 ff  Cmax =  60.7 ff  G = 1688  
+ABC: Path 20 --     252 : 4    1 AOI22_X1  A =   1.33  Df = 817.8  -41.6 ps  S =  24.1 ps  Cin =  1.6 ff  Cout =   1.6 ff  Cmax =  24.6 ff  G =  100  
+ABC: Path 21 --     255 : 4    1 OAI22_X1  A =   1.33  Df = 864.8  -59.8 ps  S =  40.4 ps  Cin =  1.6 ff  Cout =   3.9 ff  Cmax =  23.2 ff  G =  249  
+ABC: Start-point = pi2 (\dpath.a_lt_b$in1 [1]).  End-point = po8 ($abc$879$techmap\dpath.a_reg.$0\out[15:0][8]).
+ABC: + write_blif <abc-temp-dir>/output.blif 
+
+12.1.2. Re-integrating ABC results.
+ABC RESULTS:           AND2_X1 cells:        3
+ABC RESULTS:           AND3_X1 cells:        3
+ABC RESULTS:           AND4_X1 cells:        1
+ABC RESULTS:          AOI21_X1 cells:       13
+ABC RESULTS:         AOI221_X1 cells:        8
+ABC RESULTS:          AOI22_X1 cells:       21
+ABC RESULTS:            BUF_X1 cells:       16
+ABC RESULTS:         CLKBUF_X1 cells:        4
+ABC RESULTS:            INV_X1 cells:       40
+ABC RESULTS:           MUX2_X1 cells:        3
+ABC RESULTS:          NAND2_X1 cells:       33
+ABC RESULTS:          NAND3_X1 cells:        3
+ABC RESULTS:          NAND4_X1 cells:        1
+ABC RESULTS:           NOR2_X1 cells:       18
+ABC RESULTS:           NOR4_X1 cells:        3
+ABC RESULTS:          OAI21_X1 cells:       20
+ABC RESULTS:         OAI221_X1 cells:       14
+ABC RESULTS:          OAI22_X1 cells:        4
+ABC RESULTS:            OR2_X1 cells:        1
+ABC RESULTS:            OR3_X1 cells:        3
+ABC RESULTS:            OR4_X1 cells:        1
+ABC RESULTS:          XNOR2_X1 cells:       15
+ABC RESULTS:           XOR2_X1 cells:        9
+ABC RESULTS:        internal signals:      237
+ABC RESULTS:           input signals:       71
+ABC RESULTS:          output signals:       52
+Removing temp directory.
+
+13. Executing HILOMAP pass (mapping to constant drivers).
+
+14. Executing SETUNDEF pass (replace undef values with defined constants).
+
+15. Executing SPLITNETS pass (splitting up multi-bit signals).
+
+16. Executing OPT_CLEAN pass (remove unused cells and wires).
+Finding unused cells or wires in module \gcd..
+Removed 0 unused cells and 361 unused wires.
+<suppressed ~2 debug messages>
+
+17. Executing INSBUF pass (insert buffer cells for connected wires).
+
+18. Executing CHECK pass (checking for obvious problems).
+checking module gcd..
+Warning: Wire gcd.\resp_val is used but has no driver.
+Warning: Wire gcd.\resp_msg [15] is used but has no driver.
+Warning: Wire gcd.\resp_msg [14] is used but has no driver.
+Warning: Wire gcd.\resp_msg [13] is used but has no driver.
+Warning: Wire gcd.\resp_msg [12] is used but has no driver.
+Warning: Wire gcd.\resp_msg [11] is used but has no driver.
+Warning: Wire gcd.\resp_msg [10] is used but has no driver.
+Warning: Wire gcd.\resp_msg [9] is used but has no driver.
+Warning: Wire gcd.\resp_msg [8] is used but has no driver.
+Warning: Wire gcd.\resp_msg [7] is used but has no driver.
+Warning: Wire gcd.\resp_msg [6] is used but has no driver.
+Warning: Wire gcd.\resp_msg [5] is used but has no driver.
+Warning: Wire gcd.\resp_msg [4] is used but has no driver.
+Warning: Wire gcd.\resp_msg [3] is used but has no driver.
+Warning: Wire gcd.\resp_msg [2] is used but has no driver.
+Warning: Wire gcd.\resp_msg [1] is used but has no driver.
+Warning: Wire gcd.\resp_msg [0] is used but has no driver.
+Warning: Wire gcd.\req_rdy is used but has no driver.
+found and reported 18 problems.
+
+19. Printing statistics.
+
+=== gcd ===
+
+   Number of wires:                297
+   Number of wire bits:            343
+   Number of public wires:          42
+   Number of public wire bits:      88
+   Number of memories:               0
+   Number of memory bits:            0
+   Number of processes:              0
+   Number of cells:                272
+     AND2_X1                         3
+     AND3_X1                         3
+     AND4_X1                         1
+     AOI21_X1                       13
+     AOI221_X1                       8
+     AOI22_X1                       21
+     BUF_X1                         16
+     CLKBUF_X1                       4
+     DFF_X1                         35
+     INV_X1                         40
+     MUX2_X1                         3
+     NAND2_X1                       33
+     NAND3_X1                        3
+     NAND4_X1                        1
+     NOR2_X1                        18
+     NOR4_X1                         3
+     OAI21_X1                       20
+     OAI221_X1                      14
+     OAI22_X1                        4
+     OR2_X1                          1
+     OR3_X1                          3
+     OR4_X1                          1
+     XNOR2_X1                       15
+     XOR2_X1                         9
+
+   Chip area for module '\gcd': 407.512000
+
+20. Executing Verilog backend.
+Dumping module `\gcd'.
+
+Warnings: 26 unique messages, 90 total
+End of script. Logfile hash: bad11fb14c, CPU: user 1.21s system 0.07s, MEM: 28.78 MB peak
+Yosys 0.9+1706 (git sha1 UNKNOWN, gcc 7.3.1 -fPIC -Os)
+Time spent: 20% 2x stat (0 sec), 14% 1x dfflibmap (0 sec), ...
+0:01.93elapsed 99%CPU 30016memKB
