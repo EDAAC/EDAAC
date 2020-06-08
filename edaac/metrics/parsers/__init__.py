@@ -24,3 +24,4 @@ from .innovus_power_report import *
 from .innovus_log import *
 from .innovus_area_report import *
 from .yosys_log import *
+from .openroad_log import *

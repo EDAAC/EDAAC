@@ -12,6 +12,80 @@ achieving maximum productivity.
 **EDAAC** implements *Metrics* collection functionality in :code:`edaac.metrics`
 sub-package. Below, we document its functionality.
 
+Synthsis Stats
+===============
+
+We can extract useful statistics about a synthesized netlist that aid in the physical design process.
+
+Supported Tools
+----------------
+- Yosys
+
+Usage
+------
+1. Generate a report from Yosys using the `stat` command.
+2. Use :code:`edaac.metrics.parsers` to parse the report.
+
+    .. code:: python
+
+        from edaac.metrics.parsers import parse_yosys_log
+        metrics = parse_yosys_log('/path/to/report')
+
+3. :code:`metrics` is a Python dictionary of :code:`key: value` pairs.
+
+    .. code:: python
+
+        print(metrics)
+
+Dictionary
+----------
+
++-------------------------------------------------+-----------------------------------------------------------------+
+|    Key                                          | Meaning                                                         |
++=================================================+=================================================================+
+| :code:`run__synth__yosys_version`               | Version of yosys build used                                     |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`synth__inst__num__total`                 | Total numner of standard cells                                  |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`synth__inst__stdcell__area__total`       | Total area of standard cells                                    |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`synth__wire__num__total`                 | Total number of wires                                           | 
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`synth__wirebits__num__total`             | Total number of wirebits                                        |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`synth__memory__num__total`               | Total number of memories                                        |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`synth__memorybits__num__total`           | Total number of memory bits                                     |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`run__synth__warning__total`              | Total number of warnings                                        |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`run__synth__warning__unique__total`      | Total number of unique warnings                                 |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`run__synth__cpu__total`                  | CPU usage                                                       |
++-------------------------------------------------+-----------------------------------------------------------------+
+| :code:`run__synth__mem__total`                  | Memory usage                                                    |
++-------------------------------------------------+-----------------------------------------------------------------+
+
+Example
+-------
+
+.. code:: python
+
+    metrics = {
+        'run__synth__yosys_version': '0.9+1706 (git sha1 UNKNOWN, gcc 7.3.1 -fPIC -Os)',
+        'synth__inst__num__total': 272,
+        'synth__inst__stdcell__area__total': 407.512000,
+        'synth__wire__num__total': 297,
+        'synth__wirebits__num__total': 343,
+        'synth__memory__num__total': 0,
+        'synth__memorybits__num__total': 0,
+        'run__synth__warning__total': 90,
+        'run__synth__warning__unique__total': 26,
+        'run__synth__cpu__total': 1.21,
+        'run__synth__mem__total': 28.78
+    }
+    
+
 Design Rule Check
 ==================
 
@@ -163,16 +237,22 @@ If this path has a negative slack, the circuit won't work as expected at the des
 Supported Tools
 -----------------
 - Cadence Innovus
+- OpenSTA
 
 Usage
-------
-1. Generate a report from Innovus using the appropriate command.
+-----
+1. Generate a report from Innovus using the appropriate command. Or generate a report from OpenSTA using :code:`report_tns`, :code:`report_wns` and :code:`report_design_area`.
 2. Use :code:`edaac.metrics.parsers` to parse the report.
 
     .. code:: python
 
         from edaac.metrics.parsers import parse_innovus_timing_report
         metrics = parse_innovus_timing_report('/path/to/report')
+    
+    .. code:: python
+
+        from edaac.metrics.parsers import parse_openroad_log
+        metrics = parse_openroad_log('/path/to/report', 'OpenSTA')
 
 3. :code:`metrics` is a Python dictionary of :code:`key: value` pairs.
 
@@ -180,8 +260,8 @@ Usage
 
         print(metrics)
 
-Dictionary
-----------
+Dictionary from Innovus
+------------------------
 
 +--------------------------------+-----------------------------------------------------+
 |    Key                         | Meaning                                             |
@@ -202,6 +282,34 @@ Example
         'timing_tns': -27.496,
         'timing_wns': -0.851,
         'timing_violating_paths': 35
+    }
+
+
+Dictionary from OpenSTA
+------------------------
+
++--------------------------------+-----------------------------------------------------+
+|    Key                         | Meaning                                             |
++================================+=====================================================+
+| :code:`slack__negative__total` | Total negative slack                                |
++--------------------------------+-----------------------------------------------------+
+| :code:`slack__negative__worst` | Worst negative slack                                |
++--------------------------------+-----------------------------------------------------+
+| :code:`std__area__total`       | Total standard cell area                            |
++--------------------------------+-----------------------------------------------------+
+| :code:`util`                   | Core utilization                                    |
++--------------------------------+-----------------------------------------------------+
+
+Example
+-------
+
+.. code:: python
+
+    metrics = {
+        'slack__negative__total': 0.00,
+        'slack__negative__worst': 0.00,
+        'std__area__total': 491.0,
+        'util': 8.0
     }
 
 Power
